@@ -14,9 +14,14 @@ Inspired by [this document](http://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/l
 and the [OSDev wiki](http://wiki.osdev.org/), I'll try to make short step-by-step READMEs and
 code samples for anybody to follow.
 
-I will not explain the theory. Google is your friend. Learn what assembler is, pagination, interrupts,
-segmentation, etc. That is already covered by thousands of PDFs from Universities. This course
-is a tutorial, a hands-on, not a real CS lecture.
+I will not explain the theory. Google is your friend. 
+Theory is already covered by thousands of PDFs from Universities
+and the Wikipedia. 
+
+This course is a code tutorial, not a real CS lecture.
+To make up for the lack of theory, the "lessons" are tiny
+and may take 5-15 minutes to complete. Each new concept
+is presented on a new lecture.
 
 
 How to use this tutorial
@@ -27,6 +32,9 @@ you jump right to folder 08, you may find a lot of stuff which is not related
 to what folder 08 is about.
 
 To see the increments between "lessons", do a diff between folders.
+
+Each lesson README starts with the concepts you should be familiar with
+before reading the code.
 
 Second, for each folder, read the README. It is **very concise**. The only theory.
 is the required to understand the code.
