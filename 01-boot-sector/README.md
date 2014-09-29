@@ -16,6 +16,7 @@ This is the simplest boot sector ever:
 ```
 e9 fd ff 00 00 00 00 00 00 00 00 00 00 00 00 00
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[ 29 more lines with sixteen zero-bytes each ]
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 55 aa
 ```
 
@@ -26,7 +27,8 @@ The first three bytes perform an infinite jump
 Simplest boot sector ever
 -------------------------
 
-You can either write this with a binary editor, or just write a very
+You can either write the above 512 bytes
+with a binary editor, or just write a very
 simple assembler code:
 
 ```
