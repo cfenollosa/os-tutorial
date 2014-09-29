@@ -10,7 +10,7 @@ To make sure that the "disk is bootable", the BIOS checks that bytes
 
 This is the simplest boot sector ever:
 
-```asm
+```
 e9 fd ff 00 00 00 00 00 00 00 00 00 00 00 00 00
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 55 aa
