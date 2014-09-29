@@ -1,5 +1,8 @@
 This is very exciting, we're going to create our own boot sector!
 
+Theory
+------
+
 When the computer boots, the BIOS doesn't know how to load the OS, so it
 delegates that task to the boot sector. Thus, the boot sector must be
 placed in a known, standard location. That location is the first sector
@@ -15,3 +18,37 @@ e9 fd ff 00 00 00 00 00 00 00 00 00 00 00 00 00
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 55 aa
 ```
+
+It is basically all zeros, ending with the 16-bit value
+`0xAA55` (beware of indianness, x86 is little-endian). 
+The first three bytes perform an infinite jump
+
+Simplest boot sector ever
+-------------------------
+
+You can either write this with a binary editor, or just write a very
+simple assembler code:
+
+```
+; Infinite loop (e9 fd ff)
+loop:
+    jmp loop 
+
+; Fill with 510 zeros minus the size of the previous code
+times 510-($-$$) db 0
+; Magic number
+dw 0xaa55 
+```
+
+To compile:
+`nasm -f bin boot_sect_simple.asm -o boot_sect_simple.bin`
+
+> OSX warning: if this drops an error, read chapter 00 again
+
+I know you're anxious to try it out (I am!), so let's do it:
+
+`qemu boot_sect_simple.bin`
+
+You will see a window open which says "Booting from Hard Disk..." and
+nothing else. When was the last time you were so excited to see an infinite
+loop? ;-)
