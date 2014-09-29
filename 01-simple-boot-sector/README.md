@@ -1,3 +1,5 @@
+*Concepts you may want to Google beforehand: assembler, BIOS*
+
 This is very exciting, we're going to create our own boot sector!
 
 Theory

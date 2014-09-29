@@ -28,10 +28,11 @@ to what folder 08 is about.
 
 To see the increments between "lessons", do a diff between folders.
 
-Second, for each folder, read the README. It is **very concise**. There is
-no theory. Then, look at the code examples. You can try to write them by 
+Second, for each folder, read the README. It is **very concise**. The only theory.
+is the required to understand the code.
+Then, look at the code examples. You can try to write them by 
 yourself on a different folder, modify them slightly and play a bit with the 
-code.
+code, you know, the usual.
 
 Finally, the code files provided in each folder are the final result. If
 you want to learn quickly (though not as thoroughly), just read the
