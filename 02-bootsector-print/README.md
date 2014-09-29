@@ -10,7 +10,7 @@ into `ah` (the higher part of `ax`) and raise interrupt `0x10` which
 is a general interrupt for video services.
 
 `0x0e` on `ah` tells the video interrupt that the actual function
-we want to run is to 'write the contents of `al` in tty mode`.
+we want to run is to 'write the contents of `al` in tty mode'.
 
 We will set tty mode only once though in the real world we 
 cannot be sure that the contents of `ah` are constant. Some other
