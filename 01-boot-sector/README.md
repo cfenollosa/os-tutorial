@@ -31,7 +31,7 @@ You can either write the above 512 bytes
 with a binary editor, or just write a very
 simple assembler code:
 
-```assembler
+```nasm
 ; Infinite loop (e9 fd ff)
 loop:
     jmp loop 
