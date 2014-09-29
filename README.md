@@ -16,7 +16,8 @@ code samples for anybody to follow.
 
 I will not explain the theory. Google is your friend. 
 Theory is already covered by thousands of PDFs from Universities
-and the Wikipedia. 
+and the Wikipedia. The material assumes that you are comfortable
+with low level computing. 
 
 This course is a code tutorial, not a real CS lecture.
 To make up for the lack of theory, the "lessons" are tiny
@@ -36,7 +37,7 @@ To see the increments between "lessons", do a diff between folders.
 Each lesson README starts with the concepts you should be familiar with
 before reading the code.
 
-Second, for each folder, read the README. It is **very concise**. The only theory.
+Second, for each folder, read the README. It is **very concise**. The only theory
 is the required to understand the code.
 Then, look at the code examples. You can try to write them by 
 yourself on a different folder, modify them slightly and play a bit with the 
