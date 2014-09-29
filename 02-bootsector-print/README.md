@@ -7,9 +7,10 @@ something on the screen. We will raise an interrupt for this.
 On this example we are going to write each character of the "Hello"
 word into the register `al` (lower part of `ax`), the bytes `0x0e`
 into `ah` (the higher part of `ax`) and raise interrupt `0x10` which
-tells the machine to print on screen the contents of `ax`.
+is a general interrupt for video services.
 
-`0x0e` on `ah` is necessary to indicate tty mode.
+`0x0e` on `ah` tells the video interrupt that the actual function
+we want to run is to 'write the contents of `al` in tty mode`.
 
 We will set tty mode only once though in the real world we 
 cannot be sure that the contents of `ah` are constant. Some other
