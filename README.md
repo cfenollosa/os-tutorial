@@ -14,6 +14,8 @@ Inspired by [this document](http://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/l
 and the [OSDev wiki](http://wiki.osdev.org/), I'll try to make short step-by-step READMEs and
 code samples for anybody to follow.
 
+**The tutorial will be updated about every week, at the same pace that I learn the concepts**
+
 I will not explain the theory. Google is your friend. 
 Theory is already covered by thousands of PDFs from Universities
 and the Wikipedia. The material assumes that you are comfortable
