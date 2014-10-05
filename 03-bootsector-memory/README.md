@@ -36,6 +36,10 @@ by counting the bytes, and replace `0x2d` with the new one.
 Please don't continue onto the next file unless you have 100% understood
 the boot sector offset and memory addressing.
 
+
+The global offset
+-----------------
+
 Now, since offsetting `0x7c00` everywhere is very inconvenient, assemblers let
 us define a "global offset" for every memory location, with the `org` command:
 
