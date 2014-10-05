@@ -5,20 +5,23 @@ print_hex:
 
     mov cx, 0 ; our index variable
 
+; Strategy: get the last char of 'dx', then convert to ASCII
+; ASCII values: '0' (ASCII 0x30) to '9' (0x39), so just add 0x30 to byte N.
+; Then, move the ASCII byte to the correct position on the resulting string
 loop:
     cmp cx, 4 ; loop 4 times
     je end
     
-    mov ax, dx ; we will work on ax
+    ; 1. convert last char of 'dx' to ascii
+    mov ax, dx ; we will use 'ax' as our working register
     and ax, 0x000f ; 0x1234 -> 0x0004 by masking first three to zeros
-    ; convert each hex value to its ASCII value. '0' (ASCII 0x30) to '9' (0x39) 
-    ; We will need to convert byte N to byte 0x3N by just adding 0x30
-    add ax, 0x30 ; 0x0004 -> ASCII '4'
+    add ax, 0x30 ; add 0x30 to N to convert it to ASCII "N"
 
-    ; bx <- address of the character to replace = base + string length - index
-    mov bx, HEX_OUT + 5 ; last char of string, beware not to replace null char
-    sub bx, cx  ; address of char to replace
-    or [bx], ax ; copy the ASCII char to the string position
+    ; 2. get the correct position of the string to place our ASCII char
+    ; bx <- base address + string length - index of char
+    mov bx, HEX_OUT + 5 ; base + length
+    sub bx, cx  ; our index variable
+    or [bx], ax ; copy the ASCII char on 'ax' to the position pointed by 'bx'
     ror dx, 4 ; 0x1234 -> 0x4123 -> 0x3412 -> 0x2341 -> 0x1234
 
     ; increment index and loop
