@@ -14,7 +14,7 @@ start:
     mov ah, 0x0e
     int 0x10 ; 'al' already contains the char
 
-; increment pointer and do next loop
+    ; increment pointer and do next loop
     add bx, 1
     jmp start
 
