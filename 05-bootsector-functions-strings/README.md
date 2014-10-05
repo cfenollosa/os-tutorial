@@ -59,10 +59,10 @@ Calling functions
 
 As you may suppose, calling a function is just a jump to a label.
 
-The tricky part are the parameters. There are two approaches to parameters:
+The tricky part are the parameters. There are two steps to working with parameters:
 
 1. The programmer knows they share a specific register or memory address
-2. Write a bit more code and make it generic
+2. Write a bit more code and make function calls generic and without side effects
 
 Approach 1 is easy. Let's just agree that we will use `al` for the parameters.
 
