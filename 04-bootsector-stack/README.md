@@ -1,4 +1,4 @@
-*Concepts you may want to Google beforehand:stack*
+*Concepts you may want to Google beforehand: stack*
 
 The usage of the stack is important, so we'll write yet another boot sector
 with an example.
