@@ -25,7 +25,7 @@ Features
 programmers who have curiosity on how an OS works but don't have the time or willpower to start reading the Linux kernel
 top to bottom.
 - There is little theory. Yes, this is a feature. Google is your theory lecturer. Once you pass college, 
-excessive theory is worse than no theory.
+excessive theory is worse than no theory because it makes things seem more difficult than they really are.
 - The lessons are tiny and may take 5-15 minutes to complete. Trust me and trust yourself. You can do it!
 - New lessons will be added about every week, at the same pace that I learn the concept
 
