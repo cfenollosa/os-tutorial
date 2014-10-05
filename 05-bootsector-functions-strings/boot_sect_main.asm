@@ -5,12 +5,12 @@ mov bx, HELLO
 call print
 
 ; We will get fancy and print a newline
+; feel free to integrate newline code into "boot_sect_print"
 mov ah, 0x0e
 mov al, 0x0A ; newline char
 int 0x10
 mov al, 0x0D ; carriage return char
 int 0x10
-; feel free to integrate this into "boot_sect_print" if you want to
 
 mov bx, GOODBYE
 call print
