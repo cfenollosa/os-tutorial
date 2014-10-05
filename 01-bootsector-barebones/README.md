@@ -1,5 +1,7 @@
 *Concepts you may want to Google beforehand: assembler, BIOS*
 
+**Goal: Create a file which the BIOS interprets as a bootable disk**
+
 This is very exciting, we're going to create our own boot sector!
 
 Theory

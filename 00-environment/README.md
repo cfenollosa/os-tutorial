@@ -1,3 +1,7 @@
+*Concepts you may want to Google beforehand: linux, mac, terminal, compiler, emulator, nasm, qemu*
+
+**Goal: Install the software required to run this tutorial**
+
 I'm working on a Mac, though Linux is better because it will have all the standard tools already
 available for you.
 

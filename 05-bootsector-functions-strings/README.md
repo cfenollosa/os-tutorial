@@ -1,6 +1,8 @@
 *Concepts you may want to Google beforehand: control structures,
 function calling, strings*
 
+**Goal: Learn how to code basic stuff (loops, functions) with the assembler**
+
 We are close to our definitive boot sector.
 
 In lesson 6 we will start reading from the disk, which is the last step before

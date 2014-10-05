@@ -1,6 +1,8 @@
 *Concepts you may want to Google beforehand: interrupts, CPU
 registers*
 
+**Goal: Make our previously silent boot sector print some text**
+
 We will improve a bit on our infinite-loop boot sector and print
 something on the screen. We will raise an interrupt for this.
 
