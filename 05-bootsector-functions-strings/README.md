@@ -5,7 +5,7 @@ function calling, strings*
 
 We are close to our definitive boot sector.
 
-In lesson 6 we will start reading from the disk, which is the last step before
+In lesson 7 we will start reading from the disk, which is the last step before
 loading a kernel. But first, we will write some code with control structures,
 function calling, and full strings usage. We really need to be comfortable with
 those concepts before jumping to the disk and the kernel.
