@@ -3,6 +3,8 @@ os-tutorial
 
 How to create an OS from scratch!
 
+**New lessons will be added about every week, at the same pace that I learn each concept**
+
 I have always wanted to learn how to make an OS from scratch. In college I was taught
 how to implement advanced features (pagination, semaphores, memory management, etc)
 but:
@@ -27,15 +29,14 @@ top to bottom.
 - There is little theory. Yes, this is a feature. Google is your theory lecturer. Once you pass college, 
 excessive theory is worse than no theory because it makes things seem more difficult than they really are.
 - The lessons are tiny and may take 5-15 minutes to complete. Trust me and trust yourself. You can do it!
-- New lessons will be added about every week, at the same pace that I learn the concept
 
 
 How to use this tutorial
 ------------------------
 
 1. Start with the first folder and go down in order. They build on previous code, so if 
-you jump right to folder 08, you may find a lot of stuff which is not related
-to what folder 08 is about.
+you jump right to folder 05 and don't know why there is a `mov ah, 0x0e`, it's because you missed lecture 02.
+Really, just go in order. You can always skip stuff you already know.
 
 2. Read each README first. Especially the first line, which details the concepts you should be familiar with
 before reading the code.
