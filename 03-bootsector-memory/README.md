@@ -34,5 +34,6 @@ If you add or remove instructions, remember to compute the new offset of the X
 by counting the bytes, and replace `0x2d` with the new one.
 
 ~~~~~
+
 [1] This whole tutorial is heavily inspired on that document. Please read the
 root-level README for more information on that.
