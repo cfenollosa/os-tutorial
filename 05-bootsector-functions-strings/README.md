@@ -64,7 +64,7 @@ The tricky part are the parameters. There are two steps to working with paramete
 1. The programmer knows they share a specific register or memory address
 2. Write a bit more code and make function calls generic and without side effects
 
-Approach 1 is easy. Let's just agree that we will use `al` for the parameters.
+Step 1 is easy. Let's just agree that we will use `al` (actually, `ax`) for the parameters.
 
 ```nasm
 mov al, 'X'
@@ -76,7 +76,7 @@ endprint:
 print:
     mov ah, 0x0e  ; tty code
     int 0x10      ; I assume that 'al' already has the character
-    jmp endprint ; this label is also pre-agreed
+    jmp endprint  ; this label is also pre-agreed
 ```
 
 You can see that this approach will quickly grow into spaghetti code. The current
