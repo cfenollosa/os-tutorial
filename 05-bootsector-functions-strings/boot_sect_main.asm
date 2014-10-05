@@ -4,22 +4,23 @@
 mov bx, HELLO
 call print
 
-; We will get fancy and print a newline
-; feel free to integrate newline code into "boot_sect_print"
-mov ah, 0x0e
-mov al, 0x0A ; newline char
-int 0x10
-mov al, 0x0D ; carriage return char
-int 0x10
+call print_nl
 
 mov bx, GOODBYE
 call print
+
+call print_nl
+
+mov dx, 0x1234
+call print_hex
 
 ; that's it! we can hang now
 jmp $
 
 ; remember to include subroutines below the hang
 %include "boot_sect_print.asm"
+%include "boot_sect_print_hex.asm"
+
 
 ; data
 HELLO:
