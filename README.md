@@ -9,19 +9,24 @@ but:
 
 - I never got to start from my own boot sector
 - College is hard so I don't remember most of it.
+- I'm fed up with people who think that reading an already existing kernel, even if small, is 
+a good idea to learn operating systems.
 
 Inspired by [this document](http://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf)
 and the [OSDev wiki](http://wiki.osdev.org/), I'll try to make short step-by-step READMEs and
-code samples for anybody to follow.
+code samples for anybody to follow. Honestly, this tutorial is basically the first document but
+split into smaller pieces and without the theory.
 
 
 Features
 --------
 
-- This course is a code tutorial aimed at people who are comfortable with low level computing.
-- There is little theory. Yes, this is a feature. Google is your theory lecturer.
-- The lessons are tiny and may take 5-15 minutes to complete. This is the only way to learn. Grabbing a whole
-OS, even if small like Minix or TempleOS, is too overwhelming. 
+- This course is a code tutorial aimed at people who are comfortable with low level computing. For example,
+programmers who have curiosity on how an OS works but don't have the time or willpower to start reading the Linux kernel
+top to bottom.
+- There is little theory. Yes, this is a feature. Google is your theory lecturer. Once you pass college, 
+excessive theory is worse than no theory.
+- The lessons are tiny and may take 5-15 minutes to complete. Trust me and trust yourself. You can do it!
 - New lessons will be added about every week, at the same pace that I learn the concept
 
 
