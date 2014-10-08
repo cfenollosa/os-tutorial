@@ -53,6 +53,11 @@ is booting from the right drive and set the drive on `dl` accordingly**
 The BIOS sets `dl` to the drive number before calling the bootloader. However,
 I found some problems with qemu then booting from the hdd.
 
-Try the flag `-fda` for example, `qemu -fda boot_sect_main.bin` which will set `dl`
+There are two quick options:
+
+1. Try the flag `-fda` for example, `qemu -fda boot_sect_main.bin` which will set `dl`
 as `0x00`, it seems to work fine then.
+2. Explicitly use the flag `-boot`, e.g. `qemu boot_sect_main.bin -boot c` which 
+automatically sets `dl` as `0x80` and lets the bootloader read data
+
 
