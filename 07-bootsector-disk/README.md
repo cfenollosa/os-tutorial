@@ -50,5 +50,9 @@ read it.
 **Note: if you keep getting errors and your code seems fine, make sure that qemu
 is booting from the right drive and set the drive on `dl` accordingly**
 
-Try the flag `-fda` for example, qemu -fda boot_sect_main.bin` and set `dl` as `0x00`
+The BIOS sets `dl` to the drive number before calling the bootloader. However,
+I found some problems with qemu then booting from the hdd.
+
+Try the flag `-fda` for example, `qemu -fda boot_sect_main.bin` which will set `dl`
+as `0x00`, it seems to work fine then.
 
