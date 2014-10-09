@@ -1,6 +1,6 @@
 *Concepts you may want to Google beforehand: GDT*
 
-**Goals: program the GDT**
+**Goal: program the GDT**
 
 Remember segmentation from lesson 6? The offset was left shifted
 to address an extra level of indirection.
