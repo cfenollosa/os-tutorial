@@ -3,8 +3,8 @@ memory*
 
 **Goal: Print on the screen when on 32-bit protected mode**
 
-32-bit mode allows us to use 32 bit registers and memory addressing
-, protected memory, virtual memory and other advangades, but we will lose
+32-bit mode allows us to use 32 bit registers and memory addressing, 
+protected memory, virtual memory and other advangades, but we will lose
 BIOS interrupts and we'll need to code the GDT (more on this later)
 
 In this lesson we will write a print string routine by directly manipulating
