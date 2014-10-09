@@ -19,9 +19,9 @@ but it's good enough to boot, we'll fix this later with a higher language.
 As a curiosity, the first GDT entry must be `0x00` to make sure that the
 programmer didn't make any mistakes managing addresses.
 
-Furthermore, since the CPU needs to know how long the GDT is, we'll use
+Furthermore, the CPU can't directly load the GDT address, but it requires
 a meta structure called the "GDT descriptor" with the size (16b) and address
-(32b) of our actual GDT.
+(32b) of our actual GDT. It is loaded with the `lgdt` operation.
 
 Let's directly jump to the GDT code in assembly. Again, to understand
 all the segment flags, refer to the os-dev.pdf document. The theory for
