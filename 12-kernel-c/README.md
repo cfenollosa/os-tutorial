@@ -1,4 +1,4 @@
-*Concepts you may want to Google beforehand:*
+*Concepts you may want to Google beforehand: C, object code, linker, disassemble*
 
 **Goal: Learn to write the same low-level code as we did with assembler, but in C**
 
