@@ -2,7 +2,7 @@
 # $< = first dependency
 # $^ = all dependencies
 
-# First rule is the one executed when no paramaters are fed to the Makefile
+# First rule is the one executed when no parameters are fed to the Makefile
 all: run
 
 # Notice how dependencies are built as needed
