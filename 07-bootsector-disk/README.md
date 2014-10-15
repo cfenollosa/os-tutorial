@@ -51,7 +51,7 @@ read it.
 is booting from the right drive and set the drive on `dl` accordingly**
 
 The BIOS sets `dl` to the drive number before calling the bootloader. However,
-I found some problems with qemu then booting from the hdd.
+I found some problems with qemu when booting from the hdd.
 
 There are two quick options:
 
