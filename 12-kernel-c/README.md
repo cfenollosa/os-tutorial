@@ -55,8 +55,11 @@ More
 
 I encourage you to write more small programs, which feature:
 
-- Local variables
-- Function calls
-- Pointers
+- Local variables `localvars.c`
+- Function calls `functioncalls.c`
+- Pointers `pointers.c`
 
-Then compile and disassemble them, and examine the resulting machine code.
+Then compile and disassemble them, and examine the resulting machine code. Follow
+the os-guide.pdf for explanations. Try to answer this question: why does the
+disassemblement of `pointers.c` not resemble what you would expect? Where is
+the ASCII `0x48656c6c6f` for "Hello"?
