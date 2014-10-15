@@ -62,9 +62,7 @@ Run!
 You can now run `os-image.bin` with qemu.
 
 Remember that if you find disk load errors you may need to play with the disk numbers
-or qemu parameters (floppy = `0x0`, hdd = `0x80`). I usually use
-
-`qemu-system-i386 -fda os-image.bin`
+or qemu parameters (floppy = `0x0`, hdd = `0x80`). I usually use `qemu-system-i386 -fda os-image.bin`
 
 You will see four messages:
 
