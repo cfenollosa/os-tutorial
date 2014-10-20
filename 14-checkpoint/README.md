@@ -1,4 +1,5 @@
 *Concepts you may want to Google beforehand: monolithic kernel, microkernel*
+
 **Goal: Pause and organize our code a little bit**
 
 Maybe you didn't realize it, but you already have your own kernel
