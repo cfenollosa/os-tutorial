@@ -1,6 +1,6 @@
-/*/*.bin
-/*/*.o
-/*/*.swp
-/*/*.dis
-/*/*.elf
-/*/*.sym
+*.bin
+*.o
+*.swp
+*.dis
+*.elf
+*.sym
