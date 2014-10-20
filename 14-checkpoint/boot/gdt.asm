@@ -1,0 +1,1 @@
+../../09-32bit-gdt/32bit-gdt.asm
