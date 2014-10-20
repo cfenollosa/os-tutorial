@@ -12,8 +12,12 @@ CFLAGS = -g
 os-image.bin: boot/bootsect.bin kernel.bin
 	cat $^ > os-image.bin
 
-kernel.bin: kernel.elf
+kernel.bin: boot/kernel_entry.o ${OBJ}
 	i386-elf-ld -o $@ -Ttext 0x1000 $^ --oformat binary
+
+# Used for debugging purposes
+kernel.elf: boot/kernel_entry.o ${OBJ}
+	i386-elf-ld -o $@ -Ttext 0x1000 $^ 
 
 run: os-image.bin
 	qemu-system-i386 -fda os-image.bin
@@ -21,10 +25,6 @@ run: os-image.bin
 debug: os-image.bin kernel.elf
 	qemu-system-i386 -s -fda os-image.bin &
 	${GDB} -ex "target remote localhost:1234" -ex "symbol-file kernel.elf"
-
-# To build the kernel: make all objects first
-kernel.elf: boot/kernel_entry.o ${OBJ}
-	i386-elf-ld -o $@ -Ttext 0x1000 $^ 
 
 # To make an object, always compile from its .c
 %.o: %.c ${HEADERS}

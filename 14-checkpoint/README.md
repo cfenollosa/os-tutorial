@@ -31,8 +31,12 @@ make
 make install
 ```
 
-Check out the Makefile target `make debug`. We can take
-advantage of this cool qemu feature. Type `make debug` and, on the gdb shell:
+Check out the Makefile target `make debug`. This target uses builds `kernel.elf`, which
+is an object file (not binary) with all the symbols we generated on the kernel, thanks to
+the `-g` flag on gcc. Please examine it with `xxd` and you'll see some strings. Actually,
+the correct way to examine the strings in an object file is by `strings kernel.elf`
+
+We can take advantage of this cool qemu feature. Type `make debug` and, on the gdb shell:
 
 - Set up a breakpoint in `kernel.c:main()`: `b main`
 - Run the OS: `continue`
@@ -44,7 +48,8 @@ advantage of this cool qemu feature. Type `make debug` and, on the gdb shell:
 - `next` to put there our 'X'
 - Let's make sure: `print *video_memory` and look at the qemu screen. It's definitely there.
 
-Now is a good time to read some tutorial on `gdb`!
+Now is a good time to read some tutorial on `gdb` and learn super useful things like `info registers`
+which will save us a lot of time in the future!
 
 
 Strategy
