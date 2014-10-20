@@ -1,6 +1,6 @@
 *Concepts you may want to Google beforehand: monolithic kernel, microkernel, debugger, gdb*
 
-**Goal: Pause and organize our code a little bit**
+**Goal: Pause and organize our code a little bit. Then learn how to debug the kernel with gdb**
 
 Maybe you didn't realize it, but you already have your own kernel
 running!
