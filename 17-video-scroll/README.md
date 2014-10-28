@@ -20,3 +20,7 @@ we will extend our helper functions, but that is not the point for now.
 Finally, open `kernel/kernel.c`. Initially, each line displays its line
 number. You can set a breakpoint on line 14 to confirm this. Then,
 the following `kprint`s force the kernel to scroll down.
+
+This lesson ends the coverage for the os-dev.pdf document. From now on, we'll
+follow [the OSDev wiki](http://wiki.osdev.org/Meaty_Skeleton) and
+other sources and examples. Thanks Prof. Blundell for that great document!
