@@ -3,7 +3,7 @@
 **Goal: Create a development environment to build your kernel**
 
 If you're using a Mac, you will need to do this process right away. Otherwise, it could have waited
-for a few more lessons. Anyway, you will need a cross-compiler one we jump to developing in a higher
+for a few more lessons. Anyway, you will need a cross-compiler once we jump to developing in a higher
 language, that is, C. [Read why](http://wiki.osdev.org/Why_do_I_need_a_Cross_Compiler%3F)
 
 I'll be adapting the instructions [at the OSDev wiki](http://wiki.osdev.org/GCC_Cross-Compiler). 
