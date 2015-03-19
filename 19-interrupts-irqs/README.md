@@ -35,3 +35,6 @@ are defined in `isr.h`. We will also use a simple function to register
 the interrupt handlers.
 
 That was a lot of work, but now we can define our first IRQ handler!
+
+There are no changes in `kernel.c`, so there is nothing new to run and see.
+Please move on to the next lesson to check those shiny new IRQs.
