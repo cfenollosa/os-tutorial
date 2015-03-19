@@ -19,6 +19,9 @@ and the [OSDev wiki](http://wiki.osdev.org/), I'll try to make short step-by-ste
 code samples for anybody to follow. Honestly, this tutorial is basically the first document but
 split into smaller pieces and without the theory.
 
+Updated: more sources: [the little book about OS development](https://littleosbook.github.io),
+[JamesM's kernel development tutorials](http://www.jamesmolloy.co.uk/tutorial_html/index.html)
+
 
 Features
 --------
