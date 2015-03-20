@@ -4,3 +4,4 @@
 *.dis
 *.elf
 *.sym
+.DS_STORE
