@@ -197,11 +197,14 @@ void print_letter(u8 scancode) {
             break;
         default:
             /* 'keuyp' event corresponds to the 'keydown' + 0x80 
-             * it may still be a scancode we haven't implemented yet */
-            if (scancode - 0x80 <= 0x39) {
+             * it may still be a scancode we haven't implemented yet, or
+             * maybe a control/escape sequence */
+            if (scancode <= 0x7f) {
+                kprint("Unknown key down");
+            } else if (scancode <= 0x39 + 0x80) {
                 kprint("key up ");
                 print_letter(scancode - 0x80);
-            } else kprint("Unknown");
+            } else kprint("Unknown key up");
             break;
     }
 }

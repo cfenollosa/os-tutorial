@@ -34,3 +34,6 @@ created with the definitions.
 `keyboard.c` also has a long table to translate scancodes to ASCII keys. For the time
 being, we will only implement a simple subset of the US keyboard. You can read
 more [about scancodes here](http://www.win.tue.nl/~aeb/linux/kbd/scancodes-1.html)
+
+I don't know about you, but I'm thrilled! We are very close to building a simple shell.
+In the next chapter, we will expand a little bit on keyboard input
