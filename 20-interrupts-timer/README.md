@@ -1,4 +1,4 @@
-*Concepts you may want to Google beforehand: CPU timer, keyboard interrupts*
+*Concepts you may want to Google beforehand: CPU timer, keyboard interrupts, scancode*
 
 **Goal: Implement our first IRQ handlers: the CPU timer and the keyboard**
 
@@ -18,3 +18,19 @@ Finally, go back to the `kernel/kernel.c` and do two things. Enable interrupts a
 (very important!) and then initialize the timer interrupt.
 
 Go `make run` and you'll see the clock ticking!
+
+
+Keyboard
+--------
+
+The keyboard is even easier, with a drawback. The PIC does not send us the ASCII code
+for the pressed key, but the scancode for the key-down and the key-up events, so we
+will need to translate those.
+
+Check out `drivers/keyboard.c` where there are two functions: the callback and
+the initialization which configures the interrupt callback. A new `keyboard.h` was
+created with the definitions.
+
+`keyboard.c` also has a long table to translate scancodes to ASCII keys. For the time
+being, we will only implement a simple subset of the US keyboard. You can read
+more [about scancodes here](http://www.win.tue.nl/~aeb/linux/kbd/scancodes-1.html)
