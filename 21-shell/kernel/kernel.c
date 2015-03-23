@@ -1,6 +1,7 @@
 #include "../cpu/isr.h"
 #include "../drivers/screen.h"
 #include "kernel.h"
+#include "../libc/string.h"
 
 void main() {
     isr_install();
@@ -8,8 +9,6 @@ void main() {
 
     kprint("Type something, it will go through the kernel\n"
         "Type END to halt the CPU\n> ");
-
-    // Do we need an infinite loop here?
 }
 
 void user_input(char *input) {
