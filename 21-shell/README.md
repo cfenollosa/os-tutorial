@@ -38,6 +38,8 @@ We also added some flags to turn warnings into errors, since an apparantly minor
 converting pointers can blow up later on. This also forced us to modify some misc pointer
 declarations in our code.
 
+Finally, we'll add a macro to avoid warning-errors on unused parameters on `libc/function.h`
+
 Keyboard characters
 -------------------
 

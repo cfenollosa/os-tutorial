@@ -3,6 +3,7 @@
 #include "../cpu/isr.h"
 #include "screen.h"
 #include "../libc/string.h"
+#include "../libc/function.h"
 #include "../kernel/kernel.h"
 
 #define BACKSPACE 0x0E
@@ -23,7 +24,7 @@ const char sc_ascii[] = { '?', '?', '1', '2', '3', '4', '5', '6',
         'H', 'J', 'K', 'L', ';', '\'', '`', '?', '\\', 'Z', 'X', 'C', 'V', 
         'B', 'N', 'M', ',', '.', '/', '?', '?', '?', ' '};
 
-static void keyboard_callback() {
+static void keyboard_callback(registers_t regs) {
     /* The PIC leaves us the scancode in port 0x60 */
     u8 scancode = port_byte_in(0x60);
     
@@ -42,6 +43,7 @@ static void keyboard_callback() {
         append(key_buffer, letter);
         kprint(str);
     }
+    UNUSED(regs);
 }
 
 void init_keyboard() {
