@@ -41,7 +41,7 @@ We can take advantage of this cool qemu feature. Type `make debug` and, on the g
 - Set up a breakpoint in `kernel.c:main()`: `b main`
 - Run the OS: `continue`
 - Run two steps into the code: `next` then `next`. You will see that we are just about to set
-  the 'X' on the screen, but it isn't there yet (chech out the qemu screen)
+  the 'X' on the screen, but it isn't there yet (check out the qemu screen)
 - Let's see what's in the video memory: `print *video_memory`. There is the 'L' from "Landed in
   32-bit Protected Mode"
 - Hmmm, let's make sure that `video_memory` points to the correct address: `print video_memory`
