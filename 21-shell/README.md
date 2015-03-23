@@ -31,6 +31,12 @@ move `drivers/ports.*` into `cpu/` since it is clearly cpu-dependent code.
 `boot/` is also CPU-dependent code, but we will not mess with it until
 we implement the boot sequence for a different machine.
 
+There are more switches for the `CFLAGS` on the `Makefile`, since we will now
+start creating higher-level functions for our C library and we don't want
+the compiler to include any external code if we make a mistake with a declaration.
+We also added some flags to turn warnings into errors, since an apparantly minor mistake
+converting pointers can blow up later on. This also forced us to modify some misc pointer
+declarations in our code.
 
 Keyboard characters
 -------------------
