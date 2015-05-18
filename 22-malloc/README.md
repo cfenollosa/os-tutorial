@@ -15,4 +15,10 @@ our first page starts at 0x10000 (as hardcoded on `mem.c`) and
 subsequent `kmalloc()`'s produce a new address which is
 aligned 4096 bytes or 0x1000 from the previous one.
 
+Note that we added a new `strings.c:hex_to_ascii()` for
+nicer printing of hex numbers.
+
+Another cosmetic modification is to rename `types.c` to 
+`type.c` for language consistency.
+
 The rest of the files are unchanged from last lesson.

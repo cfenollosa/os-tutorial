@@ -20,10 +20,10 @@ void user_input(char *input) {
         /* Lesson 22: Code to test kmalloc, the rest is unchanged */
         u32 phys_addr;
         u32 page = kmalloc(1000, 1, &phys_addr);
-        char page_str[16];
-        int_to_ascii(page, page_str);
-        char phys_str[16];
-        int_to_ascii(phys_addr, phys_str);
+        char page_str[16] = "";
+        hex_to_ascii(page, page_str);
+        char phys_str[16] = "";
+        hex_to_ascii(phys_addr, phys_str);
         kprint("Page: ");
         kprint(page_str);
         kprint(", physical address: ");
