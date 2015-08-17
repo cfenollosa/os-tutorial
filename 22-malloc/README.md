@@ -1,12 +1,3 @@
-TODO
-FIXME
-antes de seguir
-http://wiki.osdev.org/James_Molloy%27s_Tutorial_Known_Bugs
-
-
-
-
-
 *Concepts you may want to Google beforehand: malloc*
 
 **Goal: Implement a memory allocator**
