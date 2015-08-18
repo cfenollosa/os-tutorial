@@ -39,6 +39,9 @@ C99 introduces standard fixed-width data types like `uint32_t`
 We need to include `<stdint.h>` which works even in `-ffreestanding` (but requires stdlibs)
 and use those data types instead of our own, then delete them on `type.h`
 
+We also delete the underscores around `__asm__` and `__volatile__` since they aren't needed.
+
+
 4. Improperly aligned `kmalloc`
 -------------------------------
 
@@ -53,12 +56,24 @@ For now, it will always return a new page-aligned memory block.
 5. Missing functions
 --------------------
 
+We will implement the missing `mem*` functions in following lessons
+
+
 6. Interrupt handlers
 ---------------------
-- also cli, sti in interrupt handlers
+`cli` is redundant, since we already established on the IDT entries if interrupts
+are enabled within a handler using the `idt_gate_t` flags.
+
+`sti` is also redundant, as `iret` loads the eflags value from the stack, which contains a 
+bit telling whether interrupts are on or off.
+In other words the interrupt handler automatically restores interrupts whether or not 
+interrupts were enabled before this interrupt
 
 
-7. Structs and attributes
--------------------------
+On `cpu/isr.h`, `struct registers_t` has a couple issues. 
+First, the alleged `esp` is renamed to `useless`.
+The value is useless because it has to do with the current stack context, not what was interrupted.
+Then, we rename `useresp` to `esp`
 
+Finally, we add `cld` just before `call isr_handler` on `cpu/interrupt.asm`
 
