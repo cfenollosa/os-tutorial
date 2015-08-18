@@ -4,7 +4,7 @@
 #include "../libc/string.h"
 #include "../libc/mem.h"
 
-void main() {
+void kernel_main() {
     isr_install();
     irq_install();
 
