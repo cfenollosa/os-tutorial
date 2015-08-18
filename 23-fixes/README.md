@@ -39,9 +39,11 @@ C99 introduces standard fixed-width data types like `uint32_t`
 We need to include `<stdint.h>` which works even in `-ffreestanding` (but requires stdlibs)
 and use those data types instead of our own, then delete them on `type.h`
 
-<stddef.h> to provide size\_t
+4. Improperly aligned `kmalloc`
+-------------------------------
 
-
+First, since `kmalloc` uses a size parameter, we'll use the correct data type `size_t` instead
+of `u32int_t`. `<stddef.h>` is required for `size_t`
 
 5. Missing functions
 --------------------
@@ -53,8 +55,5 @@ and use those data types instead of our own, then delete them on `type.h`
 
 7. Structs and attributes
 -------------------------
-
-8. Improperly aligned `kmalloc`
--------------------------------
 
 
