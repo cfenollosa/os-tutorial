@@ -1,6 +1,7 @@
 #include "screen.h"
 #include "../cpu/ports.h"
 #include "../libc/mem.h"
+#include <stdint.h>
 
 /* Declaration of private functions */
 int get_cursor_offset();
@@ -65,7 +66,7 @@ void kprint_backspace() {
  * Sets the video cursor to the returned offset
  */
 int print_char(char c, int col, int row, char attr) {
-    u8 *vidmem = (u8*) VIDEO_ADDRESS;
+    uint8_t *vidmem = (uint8_t*) VIDEO_ADDRESS;
     if (!attr) attr = WHITE_ON_BLACK;
 
     /* Error control: print a red 'E' if the coords aren't right */
@@ -95,12 +96,12 @@ int print_char(char c, int col, int row, char attr) {
     if (offset >= MAX_ROWS * MAX_COLS * 2) {
         int i;
         for (i = 1; i < MAX_ROWS; i++) 
-            memory_copy((u8*)(get_offset(0, i) + VIDEO_ADDRESS),
-                        (u8*)(get_offset(0, i-1) + VIDEO_ADDRESS),
+            memory_copy((uint8_t*)(get_offset(0, i) + VIDEO_ADDRESS),
+                        (uint8_t*)(get_offset(0, i-1) + VIDEO_ADDRESS),
                         MAX_COLS * 2);
 
         /* Blank last line */
-        char *last_line = (char*) (get_offset(0, MAX_ROWS-1) + (u8*) VIDEO_ADDRESS);
+        char *last_line = (char*) (get_offset(0, MAX_ROWS-1) + (uint8_t*) VIDEO_ADDRESS);
         for (i = 0; i < MAX_COLS * 2; i++) last_line[i] = 0;
 
         offset -= 2 * MAX_COLS;
@@ -126,15 +127,15 @@ void set_cursor_offset(int offset) {
     /* Similar to get_cursor_offset, but instead of reading we write data */
     offset /= 2;
     port_byte_out(REG_SCREEN_CTRL, 14);
-    port_byte_out(REG_SCREEN_DATA, (u8)(offset >> 8));
+    port_byte_out(REG_SCREEN_DATA, (uint8_t)(offset >> 8));
     port_byte_out(REG_SCREEN_CTRL, 15);
-    port_byte_out(REG_SCREEN_DATA, (u8)(offset & 0xff));
+    port_byte_out(REG_SCREEN_DATA, (uint8_t)(offset & 0xff));
 }
 
 void clear_screen() {
     int screen_size = MAX_COLS * MAX_ROWS;
     int i;
-    u8 *screen = (u8*) VIDEO_ADDRESS;
+    uint8_t *screen = (uint8_t*) VIDEO_ADDRESS;
 
     for (i = 0; i < screen_size; i++) {
         screen[i*2] = ' ';

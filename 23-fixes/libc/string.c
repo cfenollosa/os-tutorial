@@ -1,5 +1,5 @@
 #include "string.h"
-#include "../cpu/type.h"
+#include <stdint.h>
 
 /**
  * K&R implementation
@@ -23,7 +23,7 @@ void hex_to_ascii(int n, char str[]) {
     append(str, 'x');
     char zeros = 0;
 
-    s32 tmp;
+    int32_t tmp;
     int i;
     for (i = 28; i > 0; i -= 4) {
         tmp = (n >> i) & 0xF;

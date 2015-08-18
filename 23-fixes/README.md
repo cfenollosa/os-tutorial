@@ -16,13 +16,9 @@ We add  `-ffreestanding` when compiling `.o` files, which includes `kernel_entry
 Before, we disabled libgcc (not libc) through the use of `-nostdlib` and we didn't re-enable
 it for linking. Since this is tricky, we'll delete `-nostdlib`
 
+`-nostdinc` was also pased to gcc, but we will need it for step 3.
 
-2. Not setting a stack
-----------------------
-
-
-
-3. kernel.c `main()` function
+2. kernel.c `main()` function
 -----------------------------
 
 Modify `kernel/kernel.c` and change `main()` to `kernel_main()` since gcc recognizes "main" as 
@@ -33,8 +29,16 @@ Change `boot/kernel_entry.asm` to point to the new name accordingly.
 To fix the `i386-elf-ld: warning: cannot find entry symbol _start; defaulting to 0000000000001000`
 warning message, add a `global _start;` and define the `_start:` label in `boot/kernel_entry.asm`.
 
-4. Reinvented datatypes
+
+3. Reinvented datatypes
 -----------------------
+
+It looks like it was a bad idea to define non-standard data types like `u32` and such, since
+C99 introduces standard fixed-width data types like `uint32_t`
+
+We need to include `<stdint.h>` which works even in `-ffreestanding` (but requires stdlibs)
+and use those data types instead of our own, then delete them on `type.h`
+
 <stddef.h> to provide size\_t
 
 
