@@ -43,7 +43,12 @@ and use those data types instead of our own, then delete them on `type.h`
 -------------------------------
 
 First, since `kmalloc` uses a size parameter, we'll use the correct data type `size_t` instead
-of `u32int_t`. `<stddef.h>` is required for `size_t`
+of `u32int_t`. `size_t` should be used for all parameters which "count" stuff and cannot be
+negative. Include `<stddef.h>`. 
+
+We will fix our `kmalloc` in the future, making it a proper memory manager and aligning data types.
+For now, it will always return a new page-aligned memory block.
+
 
 5. Missing functions
 --------------------
