@@ -1,4 +1,4 @@
-*Concepts you may want to Google beforehand: XX*
+*Concepts you may want to Google beforehand: freestanding, uint32_t, size_t,*
 
 **Goal: Fix miscellaneous issues with our code**
 
@@ -16,7 +16,8 @@ We add  `-ffreestanding` when compiling `.o` files, which includes `kernel_entry
 Before, we disabled libgcc (not libc) through the use of `-nostdlib` and we didn't re-enable
 it for linking. Since this is tricky, we'll delete `-nostdlib`
 
-`-nostdinc` was also pased to gcc, but we will need it for step 3.
+`-nostdinc` was also pased to gcc, but we will need it for step 3, so let's delete it.
+
 
 2. kernel.c `main()` function
 -----------------------------
@@ -69,11 +70,23 @@ bit telling whether interrupts are on or off.
 In other words the interrupt handler automatically restores interrupts whether or not 
 interrupts were enabled before this interrupt
 
-
 On `cpu/isr.h`, `struct registers_t` has a couple issues. 
 First, the alleged `esp` is renamed to `useless`.
 The value is useless because it has to do with the current stack context, not what was interrupted.
 Then, we rename `useresp` to `esp`
 
-Finally, we add `cld` just before `call isr_handler` on `cpu/interrupt.asm`
+We add `cld` just before `call isr_handler` on `cpu/interrupt.asm` as suggested
+by the osdev wiki.
 
+There is a final, important issue with `cpu/interrupt.asm`. The common stubs create an instance
+of `struct registers` on the stack and then call the C handler. But that breaks the ABI, since
+the stack belongs to the called function and they may change them as they please. It is needed
+to pass the struct as a pointer.
+
+To achieve this, edit `cpu/isr.h` and `cpu/isr.c` and change `registers_t r` into `registers_t *t`,
+then, instead of accessing the fields of the struct via `.`, access the fields of the pointer via `->`.
+Finally, in `cpu/interrupt.asm`, and add a `push esp` before calling both `isr_handler` and
+`irq_handler` -- remember to also `pop eax` to clear the pointer afterwards.
+
+Both current callbacks, the timer and the keyboard, also need to be changed to use a pointer to
+`registers_t`.
