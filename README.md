@@ -3,8 +3,6 @@ os-tutorial
 
 How to create an OS from scratch!
 
-**New lessons will be added about every week, at the same pace that I learn each concept**
-
 I have always wanted to learn how to make an OS from scratch. In college I was taught
 how to implement advanced features (pagination, semaphores, memory management, etc)
 but:
