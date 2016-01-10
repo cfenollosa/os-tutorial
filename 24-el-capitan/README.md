@@ -62,3 +62,5 @@ make install-gcc
 make install-target-libgcc 
 ```
 
+
+Now try to type `make` on this lesson's folder and check that everything compiles smoothly
