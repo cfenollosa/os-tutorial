@@ -10,4 +10,4 @@ On a mac, [install Homebrew](http://brew.sh) and then `brew install qemu nasm`
 Don't use the Xcode developer tools `nasm` if you have them installed, they won't work for the most cases. Always use `/usr/local/bin/nasm`
 
 Furthermore, on a mac, qemu is split into multiple binaries. You will want
-to call `qemu-system-x86_84 binfile`
+to call `qemu-system-x86_64 binfile`
