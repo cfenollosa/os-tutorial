@@ -12,7 +12,7 @@ void kernel_main() {
     asm("int $2");
     asm("int $3");
 
-    kprint("Test of int printing:\n");
+    kprint("\nTest of int printing:\n");
     int i = 99;
     kprint_int(i);
     kprint("\n");
