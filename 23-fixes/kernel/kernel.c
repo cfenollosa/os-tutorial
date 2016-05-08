@@ -12,6 +12,14 @@ void kernel_main() {
     asm("int $2");
     asm("int $3");
 
+    kprint("Test of int printing:\n");
+    int i = 99;
+    kprint_int(i);
+    kprint("\n");
+    i++;
+    kprint_int(i);
+    kprint("\n\n");
+    
     kprint("Type something, it will go through the kernel\n"
         "Type END to halt the CPU or PAGE to request a kmalloc()\n> ");
 }
