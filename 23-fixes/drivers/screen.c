@@ -10,6 +10,9 @@ int print_char(char c, int col, int row, char attr);
 int get_offset(int col, int row);
 int get_offset_row(int offset);
 int get_offset_col(int offset);
+int get_int_length(int i);
+int get_digit(int number, int position);
+void print_digit(int digit);
 
 /**********************************************************
  * Public Kernel API functions                            *
@@ -49,6 +52,13 @@ void kprint_backspace() {
     int row = get_offset_row(offset);
     int col = get_offset_col(offset);
     print_char(0x08, col, row, WHITE_ON_BLACK);
+}
+
+
+void kprint_int(int integer) {
+    int length = get_int_length(integer);
+    for (int i = 1; i <= length; i++)
+        print_digit(get_digit(integer, i));
 }
 
 
@@ -144,6 +154,46 @@ void clear_screen() {
     set_cursor_offset(get_offset(0, 0));
 }
 
+void print_digit(int digit) {
+    if (digit == 0) kprint("0");
+    else if (digit == 1) kprint("1");
+    else if (digit == 2) kprint("2");
+    else if (digit == 3) kprint("3");
+    else if (digit == 4) kprint("4");
+    else if (digit == 5) kprint("5");
+    else if (digit == 6) kprint("6");
+    else if (digit == 7) kprint("7");
+    else if (digit == 8) kprint("8");
+    else if (digit == 9) kprint("9");
+}
+
+int get_digit(int number, int position) {
+    int length = get_int_length(number);
+    if (position > length) return 10; // nenapise nic, protoze pise jen od 0 do 9
+    position = length - position + 1;
+    int i;
+    int j = 1;
+    for (i = 1; i < position; i++)
+        j *= 10;
+
+    int digit = ((number % (j * 10)) - (number % j)) / j;
+    return digit;
+}
+
+int get_int_length(int i) {
+    int length = 1;
+    int j = 10;
+    if (i < 0)
+        i *= -1;
+    while(i >= j) {
+        length++;
+        if (j > 999999999)
+            break;
+        j *= 10;
+    }
+
+    return length;
+}
 
 int get_offset(int col, int row) { return 2 * (row * MAX_COLS + col); }
 int get_offset_row(int offset) { return offset / (2 * MAX_COLS); }
