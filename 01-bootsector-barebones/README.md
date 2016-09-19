@@ -12,8 +12,8 @@ delegates that task to the boot sector. Thus, the boot sector must be
 placed in a known, standard location. That location is the first sector
 of the disk (cylinder 0, head 0, sector 0) and it takes 512 bytes.
 
-To make sure that the "disk is bootable", the BIOS checks that bytes
-511 and 512 of the alleged boot sector are bytes `0xAA55`.
+In i386 architecture, to make sure that the "disk is bootable", the BIOS checks that bytes
+511 and 512 of the alleged boot sector are bytes `0xAA55`. If it is 0xAA55, then the BIOS will try booting the system. If it's not found (eg corrupted), the BIOS will return an error message that it didn't find a bootable disk (or the system tries booting the next disk).
 
 This is the simplest boot sector ever:
 
