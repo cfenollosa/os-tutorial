@@ -3,7 +3,7 @@
 **Goal: Set up the Interrupt Descriptor Table to handle CPU interrupts**
 
 This lesson and the following ones have been heavily inspired
-by [JamesM's tutorial](http://www.jamesmolloy.co.uk/tutorial_html/index.html)
+by [JamesM's tutorial](https://web.archive.org/web/20160412174753/http://www.jamesmolloy.co.uk/tutorial_html/index.html)
 
 Data types
 ----------
