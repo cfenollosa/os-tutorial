@@ -55,6 +55,10 @@ I know you're anxious to try it out (I am!), so let's do it:
 
 `qemu boot_sect_simple.bin`
 
+If this doesn't work, then try:
+
+`qemu-system-x86_64 boot_sect_simple.bin`
+
 You will see a window open which says "Booting from Hard Disk..." and
 nothing else. When was the last time you were so excited to see an infinite
 loop? ;-)
