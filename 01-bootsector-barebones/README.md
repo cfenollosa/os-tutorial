@@ -55,6 +55,8 @@ I know you're anxious to try it out (I am!), so let's do it:
 
 `qemu boot_sect_simple.bin`
 
+> On some systems, you may have to run `qemu-system-x86_64 boot_sect_simple.bin` If this gives an SDL error, try passing the --nographic and/or --curses flag(s).
+
 You will see a window open which says "Booting from Hard Disk..." and
 nothing else. When was the last time you were so excited to see an infinite
 loop? ;-)
