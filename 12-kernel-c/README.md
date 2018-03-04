@@ -37,7 +37,7 @@ generates machine code without any labels and/or metadata
 
 *Note: a warning may appear when linking, disregard it*
 
-Now examine both "binary" files, `function.o` and `function.bin` using `xdd`. You
+Now examine both "binary" files, `function.o` and `function.bin` using `xxd`. You
 will see that the `.bin` file is machine code, while the `.o` file has a lot
 of debugging information, labels, etc.
 
