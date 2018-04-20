@@ -25,7 +25,7 @@ e9 fd ff 00 00 00 00 00 00 00 00 00 00 00 00 00
 ```
 
 It is basically all zeros, ending with the 16-bit value
-`0xAA55` (beware of indianness, x86 is little-endian). 
+`0xAA55` (beware of endianness, x86 is little-endian). 
 The first three bytes perform an infinite jump
 
 Simplest boot sector ever
