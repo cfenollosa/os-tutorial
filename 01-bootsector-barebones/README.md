@@ -54,6 +54,8 @@ To compile:
 I know you're anxious to try it out (I am!), so let's do it:
 
 `qemu boot_sect_simple.bin`
+or on ubuntu/linux:
+`qemu-system-x86_64 -fda boot_sect_simple.bin`
 
 > On some systems, you may have to run `qemu-system-x86_64 boot_sect_simple.bin` If this gives an SDL error, try passing the --nographic and/or --curses flag(s).
 
