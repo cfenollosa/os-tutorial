@@ -1,19 +1,50 @@
-*Concepts you may want to Google beforehand: assembler, BIOS*
+*Concepts you may want to Google beforehand: assembler, BIOS, UEFI, coreboot*
 
 **Goal: Create a file which the BIOS interprets as a bootable disk**
 
 This is very exciting, we're going to create our own boot sector!
 
+Introduction
+------------
+
+After turning power on, boot firmware initializes hardware and run whatever
+we want, usually an OS, but sometimes also some maintenance tools (memtest,
+chipsec, firmware update etc.). Program which let us load any tool or an OS
+at that point is called boot loader (eg. GRUB). For many years BIOS had been
+a standard boot firmware in x86 platform, but since early 2010s UEFI has been
+a new one.
+
+UEFI brings a lot of new features. It runs in protected mode, it has FAT
+filesystem support. It's also mostly written in C, so with it we can write a
+bootloader in pure C. Unlike BIOS, it looks for a boot program on all recognized
+filesystems. That's why boot loader must be adapted to one of them (or both).
+QEMU's default is SeaBIOS, but on most of modern PCs (and mac)
+UEFI is used. In this text we describe BIOS boot loading, so it won't work
+on UEFI machine unless "Legacy BIOS mode" is on (usually it can be enabled in
+configuration utility).
+
+If you want to create a UEFI compatible bootloader, you should take a look at
+https://github.com/tianocore/edk2 which is UEFI reference implementation. It's
+also what you need to write an UEFI application. There is also OVMF package,
+which allows to run UEFI on QEMU.
+
+Be also aware that those are not only boot firmware widely used. In embedded, u-boot
+is quite popular (eg. on Raspberry Pi). Another interesting boot firmware is coreboot
+(https://www.coreboot.org/), which is open source and used (among others) in
+ChromeBooks and Purism laptops. Coreboot can be compiled with BIOS and UEFI
+interfaces as well, but often it's not necessery, because it can load GRUB, OS kernel
+or custom aplication. The only limitation is that it must fit firmware memory
+(usually ~8MB, so for generic Linux kernel it's nor enough. It can be compliled for QEMU
+too.
+
 Theory
 ------
 
-When the computer boots, the BIOS doesn't know how to load the OS, so it
-delegates that task to the boot sector. Thus, the boot sector must be
-placed in a known, standard location. That location is the first sector
-of the disk (cylinder 0, head 0, sector 0) and it takes 512 bytes.
-
-To make sure that the "disk is bootable", the BIOS checks that bytes
-511 and 512 of the alleged boot sector are bytes `0xAA55`.
+When BIOS has initialized hardware it's ready to load a boot loader. BIOS can access
+hard drives, optical media, USB sticks, but it has no file system drivers. Instead, it
+looks for a valid boot sector in first 512 bytes of the disk (cylinder 0, head 0,
+sector 0). If it ends with `0xAA55` (little endian), BIOS will run code found in boot
+sector.
 
 This is the simplest boot sector ever:
 
