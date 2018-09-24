@@ -1,11 +1,11 @@
-os-tutorial
+CLI Yarn OS
 ===========
 
-How to create an OS from scratch!
+It's named what it is.
 
-I have always wanted to learn how to make an OS from scratch. In college I was taught
-how to implement advanced features (pagination, semaphores, memory management, etc)
-but:
+I like how [Yarn](https://yarnpkg.com/en/) works, and it's a package manager. I always prefer
+a good CLI app to any sort of gui. So, I'm taking a crack at making an OS to suit that. I think
+I can maaaybe pull this off.
 
 - I never got to start from my own boot sector
 - College is hard so I don't remember most of it.
