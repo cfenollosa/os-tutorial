@@ -16,7 +16,7 @@ We add  `-ffreestanding` when compiling `.o` files, which includes `kernel_entry
 Before, we disabled libgcc (not libc) through the use of `-nostdlib` and we didn't re-enable
 it for linking. Since this is tricky, we'll delete `-nostdlib`
 
-`-nostdinc` was also pased to gcc, but we will need it for step 3, so let's delete it.
+`-nostdinc` was also passed to gcc, but we will need it for step 3, so let's delete it.
 
 
 2. kernel.c `main()` function
