@@ -1,7 +1,7 @@
 
 **Goal: Clean the code a bit and parse user input**
 
-In this lesson we will do tho things. First, we will clean up the code a bit, so it is ready 
+In this lesson we will do two things. First, we will clean up the code a bit, so it is ready 
 for further lessons. During the previous ones I tried to put things in the most predictable places,
 but it is also a good exercise to know when the code base is growing and adapt it to current
 and further needs.
