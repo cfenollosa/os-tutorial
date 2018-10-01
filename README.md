@@ -1,15 +1,15 @@
-os-tutorial
+OS-tutorial:
 ===========
 
 How to create an OS from scratch!
 
 I have always wanted to learn how to make an OS from scratch. In college I was taught
 how to implement advanced features (pagination, semaphores, memory management, etc)
-but:
+BUT-
 
-- I never got to start from my own boot sector
-- College is hard so I don't remember most of it.
-- I'm fed up with people who think that reading an already existing kernel, even if small, is 
+1. I never got to start from my own boot sector.
+2. College was hard so I don't remember most of it.
+3. I'm fed up with people who think that reading an already existing kernel, even if small, is 
 a good idea to learn operating systems.
 
 Inspired by [this document](http://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf)
@@ -21,18 +21,18 @@ Updated: more sources: [the little book about OS development](https://littleosbo
 [JamesM's kernel development tutorials](https://web.archive.org/web/20160412174753/http://www.jamesmolloy.co.uk/tutorial_html/index.html)
 
 
-Features
+Features:
 --------
 
 - This course is a code tutorial aimed at people who are comfortable with low level computing. For example,
-programmers who have curiosity on how an OS works but don't have the time or willpower to start reading the Linux kernel
+programmers who have curiosity on how an OS works but don't have the time or willpower to start reading the Linux kernel from
 top to bottom.
 - There is little theory. Yes, this is a feature. Google is your theory lecturer. Once you pass college, 
 excessive theory is worse than no theory because it makes things seem more difficult than they really are.
 - The lessons are tiny and may take 5-15 minutes to complete. Trust me and trust yourself. You can do it!
 
 
-How to use this tutorial
+How to use this tutorial:
 ------------------------
 
 1. Start with the first folder and go down in order. They build on previous code, so if 
@@ -40,7 +40,7 @@ you jump right to folder 05 and don't know why there is a `mov ah, 0x0e`, it's b
 Really, just go in order. You can always skip stuff you already know.
 
 2. Open the README and read the first line, which details the concepts you should be familiar with
-before reading the code. Google concepts you are not familiar with. The second line states the goals for each lesson. 
+before reading the code. Google the concepts you are not familiar with. The second line states the goals for each lesson. 
 Read them, because they explain why we do what we do. The "why" is as important as the "how".
  
 3. Read the rest of the README. It is **very concise**.
@@ -56,7 +56,7 @@ trying to break it or replicate it with different commands.
 TL;DR: First read the README on each folder, then the code files. If you're brave, try to code them yourself.
 
 
-Strategy
+Strategy:
 --------
 
 We will want to do many things with our OS:
@@ -84,7 +84,7 @@ If we feel brave enough:
 
 
 
-Contributing
+Contributing:
 ------------
 
 This is a personal learning project, and even though it hasn't been updated for a long time, I still have hopes to get into it at some point.
@@ -92,3 +92,5 @@ This is a personal learning project, and even though it hasn't been updated for 
 I'm thankful to all those who have pointed out bugs and submitted pull requests. I will need some time to review everything and I cannot guarantee that at this moment.
 
 Please feel free to fork this repo. If many of you are interested in continuing the project, let me know and I'll link the "main fork" from here.
+
+**THANK YOU**
