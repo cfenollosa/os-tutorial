@@ -21,7 +21,7 @@ Updated: more sources: [the little book about OS development](https://littleosbo
 [JamesM's kernel development tutorials](https://web.archive.org/web/20160412174753/http://www.jamesmolloy.co.uk/tutorial_html/index.html)
 
 
-Features
+Features ......
 --------
 
 - This course is a code tutorial aimed at people who are comfortable with low level computing. For example,
