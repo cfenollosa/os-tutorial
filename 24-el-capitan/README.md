@@ -33,7 +33,7 @@ export PATH="$PREFIX/bin:$PATH"
 binutils
 --------
 
-Rember: always be careful before pasting walls of text from the internet. I recommend copying line by line.
+Remember: always be careful before pasting walls of text from the internet. I recommend copying line by line.
 
 ```sh
 mkdir /tmp/src
