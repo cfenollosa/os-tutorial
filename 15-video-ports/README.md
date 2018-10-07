@@ -1,6 +1,10 @@
-*Concepts you may want to Google beforehand: I/O ports*
+# Video Ports
 
-**Goal: Learn how to use the VGA card data ports**
+## Concepts you may want to Google beforehand
+
+### I/O ports
+
+## Goal: Learn how to use the VGA card data ports
 
 We will use C to communicate with devices via I/O registers and ports.
 

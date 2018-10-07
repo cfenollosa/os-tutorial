@@ -1,6 +1,10 @@
-*Concepts you may want to Google beforehand: segmentation*
+# Bootsector Segmentation
 
-**Goal: learn how to address memory with 16-bit real mode segmentation**
+## Concepts you may want to Google beforehand
+
+### segmentation
+
+## Goal: learn how to address memory with 16-bit real mode segmentation
 
 If you are comfortable with segmentation, skip this lesson.
 

@@ -1,11 +1,16 @@
-*Concepts you may want to Google beforehand: assembler, BIOS*
+# Bootsector Barebones
 
-**Goal: Create a file which the BIOS interprets as a bootable disk**
+## Concepts you may want to Google beforehand
+
+### assembler, BIOS
+
+## Goal: Create a file which the BIOS interprets as a bootable disk
 
 This is very exciting, we're going to create our own boot sector!
 
-Theory
-------
+## Theory
+
+---
 
 When the computer boots, the BIOS doesn't know how to load the OS, so it
 delegates that task to the boot sector. Thus, the boot sector must be
@@ -17,7 +22,7 @@ To make sure that the "disk is bootable", the BIOS checks that bytes
 
 This is the simplest boot sector ever:
 
-```
+```nasm
 e9 fd ff 00 00 00 00 00 00 00 00 00 00 00 00 00
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 [ 29 more lines with sixteen zero-bytes each ]
@@ -25,11 +30,12 @@ e9 fd ff 00 00 00 00 00 00 00 00 00 00 00 00 00
 ```
 
 It is basically all zeros, ending with the 16-bit value
-`0xAA55` (beware of endianness, x86 is little-endian). 
-The first three bytes perform an infinite jump
+`0xAA55` (beware of endianness, x86 is little-endian).
+The first three bytes perform an infinite jump.
 
-Simplest boot sector ever
--------------------------
+## Simplest boot sector ever
+
+---
 
 You can either write the above 512 bytes
 with a binary editor, or just write a very
@@ -38,12 +44,12 @@ simple assembler code:
 ```nasm
 ; Infinite loop (e9 fd ff)
 loop:
-    jmp loop 
+    jmp loop
 
 ; Fill with 510 zeros minus the size of the previous code
 times 510-($-$$) db 0
 ; Magic number
-dw 0xaa55 
+dw 0xaa55
 ```
 
 To compile:

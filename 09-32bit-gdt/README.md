@@ -1,6 +1,10 @@
-*Concepts you may want to Google beforehand: GDT*
+# 32-bit GDT
 
-**Goal: program the GDT**
+## Concepts you may want to Google beforehand
+
+### GDT
+
+## Goal: program the GDT
 
 Remember segmentation from lesson 6? The offset was left shifted
 to address an extra level of indirection.
@@ -9,7 +13,7 @@ In 32-bit mode, segmentation works differently. Now, the offset becomes an
 index to a segment descriptor (SD) in the GDT. This descriptor defines
 the base address (32 bits), the size (20 bits) and some flags, like
 readonly, permissions, etc. To add confusion, the data structures are split,
-so open the os-dev.pdf file and check out the figure on page 34 or the 
+so open the os-dev.pdf file and check out the figure on page 34 or the
 Wikipedia page for the GDT.
 
 The easiest way to program the GDT is to define two segments, one for code

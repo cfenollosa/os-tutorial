@@ -1,7 +1,10 @@
-*Concepts you may want to Google beforehand: control structures,
-function calling, strings*
+# Bootsector Functions
 
-**Goal: Learn how to code basic stuff (loops, functions) with the assembler**
+## Concepts you may want to Google beforehand
+
+### control structures, function calling, strings
+
+## Goal: Learn how to code basic stuff (loops, functions) with the assembler
 
 We are close to our definitive boot sector.
 
@@ -10,9 +13,9 @@ loading a kernel. But first, we will write some code with control structures,
 function calling, and full strings usage. We really need to be comfortable with
 those concepts before jumping to the disk and the kernel.
 
+## Strings
 
-Strings
--------
+---
 
 Define strings like bytes, but terminate them with a null-byte (yes, like C)
 to be able to determine their end.
@@ -25,9 +28,9 @@ mystring:
 Notice that text surrounded with quotes is converted to ASCII by the assembler,
 while that lone zero will be passed as byte `0x00` (null byte)
 
+## Control structures
 
-Control structures
-------------------
+---
 
 We have already used one: `jmp $` for the infinite loop.
 
@@ -55,9 +58,9 @@ Think in your head in high level, then convert it to assembler in this fashion.
 There are many `jmp` conditions: if equal, if less than, etc. They are pretty 
 intuitive but you can always Google them
 
+## Calling functions
 
-Calling functions
------------------
+---
 
 As you may suppose, calling a function is just a jump to a label.
 
@@ -98,29 +101,30 @@ To save the register data, there is also a special command which uses the stack:
 and its brother `popa`, which pushes all registers to the stack automatically and
 recovers them afterwards.
 
-
 Including external files
-------------------------
+
+---
 
 I assume you are a programmer and don't need to convince you why this is
 a good idea.
 
 The syntax is
+
 ```nasm
 %include "file.asm"
 ```
 
-
 Printing hex values
--------------------
+
+---
 
 In the next lesson we will start reading from disk, so we need some way
 to make sure that we are reading the correct data. File `boot_sect_print_hex.asm`
 extends `boot_sect_print.asm` to print hex bytes, not just ASCII chars.
 
+Code!
 
-Code! 
------
+---
 
 Let's jump to the code. File `boot_sect_print.asm` is the subroutine which will
 get `%include`d in the main file. It uses a loop to print bytes on screen.

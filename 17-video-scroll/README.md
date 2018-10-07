@@ -1,6 +1,10 @@
-*Concepts you may want to Google beforehand: scroll*
+# Video Scroll
 
-**Goal: Scroll the screen when the text reaches the bottom**
+## Concepts you may want to Google beforehand
+
+### scroll
+
+## Goal: Scroll the screen when the text reaches the bottom
 
 For this short lesson, open `drivers/screen.c` and note that at the
 bottom of `print_char` there is a new section (line 84) which checks

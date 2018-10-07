@@ -1,9 +1,14 @@
-*Concepts you may want to Google beforehand: kernel, ELF format, makefile*
+# Kernel Barebones
 
-**Goal: Create a simple kernel and a bootsector capable of booting it**
+## Concepts you may want to Google beforehand
 
-The kernel
-----------
+### kernel, ELF format, makefile
+
+## Goal: Create a simple kernel and a bootsector capable of booting it
+
+## The kernel
+
+---
 
 Our C kernel will just print an 'X' on the top left corner of the screen. Go ahead
 and open `kernel.c`.
@@ -20,9 +25,9 @@ a binary, we will generate an `elf` format file which will be linked with `kerne
 
 `nasm kernel_entry.asm -f elf -o kernel_entry.o`
 
+## The linker
 
-The linker
-----------
+---
 
 A linker is a very powerful tool and we only started to benefit from it.
 
@@ -34,9 +39,9 @@ run:
 Notice how our kernel will be placed not at `0x0` in memory, but at `0x1000`. The
 bootsector will need to know this address too.
 
+## The bootsector
 
-The bootsector
---------------
+---
 
 It is very similar to the one in lesson 10. Open `bootsect.asm` and examine the code.
 Actually, if you remove all the lines used to print messages on the screen, it accounts
@@ -44,9 +49,9 @@ to a couple dozen lines.
 
 Compile it with `nasm bootsect.asm -f bin -o bootsect.bin`
 
+## Putting it all together
 
-Putting it all together
------------------------
+---
 
 Now what? We have two separate files for the bootsector and the kernel?
 
@@ -55,9 +60,9 @@ just concatenate them:
 
 `cat bootsect.bin kernel.bin > os-image.bin`
 
+## Run
 
-Run!
-----
+---
 
 You can now run `os-image.bin` with qemu.
 
@@ -73,9 +78,9 @@ You will see four messages:
 
 Congratulations!
 
+## Makefile
 
-Makefile
---------
+---
 
 As a last step, we will tidy up the compilation process with a Makefile. Open the `Makefile`
 script and examine its contents. If you don't know what a Makefile is, now is a good time

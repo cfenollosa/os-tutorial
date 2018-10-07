@@ -1,6 +1,10 @@
-*Concepts you may want to Google beforehand: monolithic kernel, microkernel, debugger, gdb*
+# Checkpoint
 
-**Goal: Pause and organize our code a little bit. Then learn how to debug the kernel with gdb**
+## Concepts you may want to Google beforehand
+
+### monolithic kernel, microkernel, debugger, gdb
+
+## Goal: Pause and organize our code a little bit. Then learn how to debug the kernel with gdb
 
 Maybe you didn't realize it, but you already have your own kernel
 running!
@@ -50,7 +54,6 @@ We can take advantage of this cool qemu feature. Type `make debug` and, on the g
 
 Now is a good time to read some tutorial on `gdb` and learn super useful things like `info registers`
 which will save us a lot of time in the future!
-
 
 You may notice that, since this is a tutorial, we haven't yet discussed which kind
 of kernel we will write. It will probably be a monolithic one since they are easier

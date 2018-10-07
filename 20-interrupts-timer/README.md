@@ -1,11 +1,16 @@
-*Concepts you may want to Google beforehand: CPU timer, keyboard interrupts, scancode*
+# Interrupts Timer
 
-**Goal: Implement our first IRQ handlers: the CPU timer and the keyboard**
+## Concepts you may want to Google beforehand
+
+### CPU timer, keyboard interrupts, scancode*
+
+## Goal: Implement our first IRQ handlers: the CPU timer and the keyboard
 
 Everything is now ready to test our hardware interrupts.
 
-Timer
------
+## Timer
+
+---
 
 The timer is easy to configure. First we'll declare an `init_timer()` on `cpu/timer.h` and
 implement it on `cpu/timer.c`. It is just a matter of computing the clock frequency and
@@ -19,9 +24,9 @@ Finally, go back to the `kernel/kernel.c` and do two things. Enable interrupts a
 
 Go `make run` and you'll see the clock ticking!
 
+## Keyboard
 
-Keyboard
---------
+---
 
 The keyboard is even easier, with a drawback. The PIC does not send us the ASCII code
 for the pressed key, but the scancode for the key-down and the key-up events, so we

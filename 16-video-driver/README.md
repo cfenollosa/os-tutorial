@@ -1,6 +1,10 @@
-*Concepts you may want to Google beforehand: VGA character cells, screen offset*
+# Video Driver
 
-**Goal: Write strings on the screen**
+## Concepts you may want to Google beforehand
+
+### VGA character cells, screen offset
+
+## Goal: Write strings on the screen
 
 Finally, we are going to be able to output text on the screen. This lesson contains
 a bit more code than usual, so let's go step by step.
@@ -20,9 +24,9 @@ Then there is the routine that directly manipulates the video memory, `print_cha
 Finally, there are three small helper functions to transform rows and columns into offsets
 and vice versa.
 
+## kprint_at
 
-kprint_at
----------
+---
 
 `kprint_at` may be called with a `-1` value for `col` and `row`, which indicates that
 we will print the string at the current cursor position.
@@ -35,23 +39,22 @@ it for the next loop.
 
 `kprint` is basically a wrapper for `kprint_at`
 
+## print_char
 
-
-print_char
-----------
+---
 
 Like `kprint_at`, `print_char` allows cols/rows to be `-1`. In that case it retrieves
 the cursor position from the hardware, using the `ports.c` routines.
 
 `print_char` also handles newlines. In that case, we will position the cursor offset
-to column 0 of the next row. 
+to column 0 of the next row.
 
 Remember that the VGA cells take two bytes, one for the character itself and another one
 for the attribute.
 
+## kernel.c
 
-kernel.c
---------
+---
 
 Our new kernel is finally able to print strings.
 

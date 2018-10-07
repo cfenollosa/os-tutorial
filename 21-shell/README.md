@@ -1,14 +1,15 @@
+# Shell
 
-**Goal: Clean the code a bit and parse user input**
+## Goal: Clean the code a bit and parse user input
 
-In this lesson we will do tho things. First, we will clean up the code a bit, so it is ready 
+In this lesson we will do tho things. First, we will clean up the code a bit, so it is ready
 for further lessons. During the previous ones I tried to put things in the most predictable places,
 but it is also a good exercise to know when the code base is growing and adapt it to current
 and further needs.
 
+## Code cleaning
 
-Code cleaning
--------------
+---
 
 First of all, we will quickly start to need more utility functions
 for handling strings and so on. In a regular OS, this is called the C library,
@@ -40,25 +41,25 @@ declarations in our code.
 
 Finally, we'll add a macro to avoid warning-errors on unused parameters on `libc/function.h`
 
-Keyboard characters
--------------------
+## Keyboard characters
+
+---
 
 How to access the typed characters, then?
 
-- When a key is pressed, the callback gets the ASCII code via a new
-arrays which are defined at the beginning of `keyboard.c`
+- When a key is pressed, the callback gets the ASCII code via a new arrays which are defined at the beginning of `keyboard.c`
 - The callback then appends that character to a buffer, `key_buffer`
 - It is also printed on the screen
 - When the OS wants to read user input, it calls `libc/io.c:readline()`
 
 `keyboard.c` also parses backspace, by removing the last element
-of the key buffer, and deleting it from the screen, by calling 
+of the key buffer, and deleting it from the screen, by calling
 `screen.c:kprint_backspace()`. For this we needed to modify a bit
 `print_char()` to not advance the offset when printing a backspace
 
+## Responding to user input
 
-Responding to user input
-------------------------
+---
 
 The keyboard callback checks for a newline, and then calls the kernel,
 telling it that the user has input something. Out final libc function

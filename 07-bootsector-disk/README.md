@@ -1,7 +1,10 @@
-*Concepts you may want to Google beforehand: hard disk, cylinder, head, sector, 
-carry bit*
+# Bootsector Disk
 
-**Goal: Let the bootsector load data from disk in order to boot the kernel**
+## Concepts you may want to Google beforehand
+
+### hard disk, cylinder, head, sector, carry bit
+
+## Goal: Let the bootsector load data from disk in order to boot the kernel
 
 Our OS won't fit inside the bootsector 512 bytes, so we need to read data from
 a disk in order to run the kernel.
@@ -28,9 +31,9 @@ like `jc` (jump if the carry bit is set)
 The BIOS also sets `al` to the number of sectors read, so always compare it
 to the expected number.
 
-
 Code
-----
+
+---
 
 Open and examine `boot_sect_disk.asm` for the complete routine that
 reads from disk.
@@ -55,9 +58,5 @@ I found some problems with qemu when booting from the hdd.
 
 There are two quick options:
 
-1. Try the flag `-fda` for example, `qemu -fda boot_sect_main.bin` which will set `dl`
-as `0x00`, it seems to work fine then.
-2. Explicitly use the flag `-boot`, e.g. `qemu boot_sect_main.bin -boot c` which 
-automatically sets `dl` as `0x80` and lets the bootloader read data
-
-
+1. Try the flag `-fda` for example, `qemu -fda boot_sect_main.bin` which will set `dl` as `0x00`, it seems to work fine then.
+2. Explicitly use the flag `-boot`, e.g. `qemu boot_sect_main.bin -boot c` which automatically sets `dl` as `0x80` and lets the bootloader read data
