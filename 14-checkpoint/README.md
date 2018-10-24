@@ -55,4 +55,4 @@ which will save us a lot of time in the future!
 You may notice that, since this is a tutorial, we haven't yet discussed which kind
 of kernel we will write. It will probably be a monolithic one since they are easier
 to design and implement, and after all this is our first OS. Maybe in the future
-we'll add a lesson "15-b" with a microkernel design. Who knows.
+we'll add a lesson "15-b" with a microkernel design. Who knows?
