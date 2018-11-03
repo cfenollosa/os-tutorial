@@ -1,6 +1,6 @@
 **Goal: Update our build system to El Capitan**
 
-If you were following this guide from the beginning, and upgraded to El Capitan only
+If you were following this guide from the beginning and upgraded to El Capitan only
 to find that Makefiles don't compile anymore, follow these instructions to upgrade
 your cross-compiler.
 
