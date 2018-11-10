@@ -9,7 +9,7 @@ print_string_pm:
     mov edx, VIDEO_MEMORY
 
 print_string_pm_loop:
-    mov al, [ebx] ; [ebx] is the address of our character
+    mov al, [ebx] ; 'ebx' is the address of our character
     mov ah, WHITE_ON_BLACK
 
     cmp al, 0 ; check if end of string
