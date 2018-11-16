@@ -19,7 +19,7 @@ When this port is queried, it saves the result in port `0x3d5`
 
 Don't miss the opportunity to use `gdb` to inspect the value of C variables,
 since we still can't print them on the screen. To do so, set a breakpoint
-for a specific line, `breakpoint kernel.c:21` and use the `print` command
+for a specific line, `b kernel.c:21` and use the `print` command
 to examine variables. Aren't you glad now that we invested some time in
 compiling the cross-compiled gdb? ;)
 
