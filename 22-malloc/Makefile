@@ -12,7 +12,7 @@ CFLAGS = -g -m32 -nostdlib -nostdinc -fno-builtin -fno-stack-protector -nostartf
 
 # First rule is run by default
 os-image.bin: boot/bootsect.bin kernel.bin
-	cat $^ > os-image.bin
+	cat $^ > $@
 
 # '--oformat binary' deletes all symbols as a collateral, so we don't need
 # to 'strip' them manually on this case

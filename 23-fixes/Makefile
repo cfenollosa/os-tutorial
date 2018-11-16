@@ -11,7 +11,7 @@ CFLAGS = -g -ffreestanding -Wall -Wextra -fno-exceptions -m32
 
 # First rule is run by default
 os-image.bin: boot/bootsect.bin kernel.bin
-	cat $^ > os-image.bin
+	cat $^ > $@
 
 # '--oformat binary' deletes all symbols as a collateral, so we don't need
 # to 'strip' them manually on this case
