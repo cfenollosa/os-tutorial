@@ -13,6 +13,18 @@ int get_offset_col(int offset);
  * Public Kernel API functions                            *
  **********************************************************/
 
+void clear_screen() {
+    int screen_size = MAX_COLS * MAX_ROWS;
+    int i;
+    char *screen = VIDEO_ADDRESS;
+
+    for (i = 0; i < screen_size; i++) {
+        screen[i*2] = ' ';
+        screen[i*2+1] = WHITE_ON_BLACK;
+    }
+    set_cursor_offset(get_offset(0, 0));
+}
+
 /**
  * Print a message on the specified location
  * If col, row, are negative, we will use the current offset
@@ -118,18 +130,6 @@ void set_cursor_offset(int offset) {
     port_byte_out(REG_SCREEN_DATA, (unsigned char)(offset >> 8));
     port_byte_out(REG_SCREEN_CTRL, 15);
     port_byte_out(REG_SCREEN_DATA, (unsigned char)(offset & 0xff));
-}
-
-void clear_screen() {
-    int screen_size = MAX_COLS * MAX_ROWS;
-    int i;
-    char *screen = VIDEO_ADDRESS;
-
-    for (i = 0; i < screen_size; i++) {
-        screen[i*2] = ' ';
-        screen[i*2+1] = WHITE_ON_BLACK;
-    }
-    set_cursor_offset(get_offset(0, 0));
 }
 
 
