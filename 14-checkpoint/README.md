@@ -11,7 +11,9 @@ and think on a strategy.
 
 Take a look at the new folder structure. Most of the files have been symlinked
 from previous lessons, so if we have to change them at some point, it will be
-a better idea to remove the symlink and create a new file.
+a better idea to remove the symlink and create a new file. Open `boot/bootsect.asm`
+and note that since our kernel will be larger, the number of sectors to read when
+loading it from disk has increased from `2` to `16`.
 
 Furthermore, since from now on we will use mostly C to code, we'll take advantage of qemu's
 ability to open a connection to gdb. First, let's install a cross-compiled `gdb` since
