@@ -6,7 +6,7 @@
 static void keyboard_callback(registers_t regs) {
     /* The PIC leaves us the scancode in port 0x60 */
     u8 scancode = port_byte_in(0x60);
-    char *sc_ascii;
+    char sc_ascii[4];
     int_to_ascii(scancode, sc_ascii);
     kprint("Keyboard scancode: ");
     kprint(sc_ascii);
@@ -99,24 +99,24 @@ void print_letter(u8 scancode) {
         case 0x19:
             kprint("P");
             break;
-		case 0x1A:
-			kprint("[");
-			break;
-		case 0x1B:
-			kprint("]");
-			break;
-		case 0x1C:
-			kprint("ENTER");
-			break;
-		case 0x1D:
-			kprint("LCtrl");
-			break;
-		case 0x1E:
-			kprint("A");
-			break;
-		case 0x1F:
-			kprint("S");
-			break;
+        case 0x1A:
+            kprint("[");
+            break;
+        case 0x1B:
+            kprint("]");
+            break;
+        case 0x1C:
+            kprint("ENTER");
+            break;
+        case 0x1D:
+            kprint("LCtrl");
+            break;
+        case 0x1E:
+            kprint("A");
+            break;
+        case 0x1F:
+            kprint("S");
+            break;
         case 0x20:
             kprint("D");
             break;
@@ -147,24 +147,24 @@ void print_letter(u8 scancode) {
         case 0x29:
             kprint("`");
             break;
-		case 0x2A:
-			kprint("LShift");
-			break;
-		case 0x2B:
-			kprint("\\");
-			break;
-		case 0x2C:
-			kprint("Z");
-			break;
-		case 0x2D:
-			kprint("X");
-			break;
-		case 0x2E:
-			kprint("C");
-			break;
-		case 0x2F:
-			kprint("V");
-			break;
+        case 0x2A:
+            kprint("LShift");
+            break;
+        case 0x2B:
+            kprint("\\");
+            break;
+        case 0x2C:
+            kprint("Z");
+            break;
+        case 0x2D:
+            kprint("X");
+            break;
+        case 0x2E:
+            kprint("C");
+            break;
+        case 0x2F:
+            kprint("V");
+            break;
         case 0x30:
             kprint("B");
             break;
