@@ -24,9 +24,7 @@ int 0x10
 ; A register can't be used as source and destination for the same command.
 mov al, "3"
 int 0x10
-mov bx, the_secret
-add bx, 0x7c00
-mov al, [bx]
+mov al, [the_secret+0x7c00]
 int 0x10
 
 ; attempt 4
