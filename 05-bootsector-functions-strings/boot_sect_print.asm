@@ -1,5 +1,6 @@
 print:
     pusha
+    mov ah, 0x0e
 
 ; keep this in mind:
 ; while (string[i] != 0) { print string[i]; i++ }
@@ -11,7 +12,7 @@ start:
     je done
 
     ; the part where we print with the BIOS help
-    mov ah, 0x0e
+    
     int 0x10 ; 'al' already contains the char
 
     ; increment pointer and do next loop
