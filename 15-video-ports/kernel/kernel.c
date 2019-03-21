@@ -1,5 +1,4 @@
 #include "../drivers/ports.h"
-
 void main() {
     /* Screen cursor position: ask VGA control register (0x3d4) for bytes
      * 14 = high byte of cursor and 15 = low byte of cursor. */
@@ -29,4 +28,7 @@ void main() {
     char *vga = 0xb8000;
     vga[offset_from_vga] = 'X'; 
     vga[offset_from_vga+1] = 0x0f; /* White text on black background */
+    vga[offset_from_vga+2] = 'X'; 
+    vga[offset_from_vga+3] = 0x0d; /* White text on black background */
+
 }

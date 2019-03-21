@@ -4,9 +4,12 @@
 
     mov bx, MSG_REAL_MODE
     call print ; This will be written after the BIOS messages
+	call print_nl
 
     call switch_to_pm
-    jmp $ ; this will actually never be executed
+    call print_test
+    call print_test
+	jmp $ ; this will actually never be executed
 
 %include "../05-bootsector-functions-strings/boot_sect_print.asm"
 %include "../09-32bit-gdt/32bit-gdt.asm"
@@ -21,6 +24,7 @@ BEGIN_PM: ; after the switch we will get here
 
 MSG_REAL_MODE db "Started in 16-bit real mode", 0
 MSG_PROT_MODE db "Loaded 32-bit protected mode", 0
+;TEST_MSG db "TEST", 0
 
 ; bootsector
 times 510-($-$$) db 0

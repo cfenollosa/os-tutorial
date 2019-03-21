@@ -1,6 +1,8 @@
 os-tutorial
 ===========
 
+*Update*: Modified something for Ubuntu run, such as gcc,ld key words and flags
+
 How to create an OS from scratch!
 
 I have always wanted to learn how to make an OS from scratch. In college I was taught

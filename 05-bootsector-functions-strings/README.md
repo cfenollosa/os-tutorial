@@ -123,7 +123,7 @@ Code!
 -----
 
 Let's jump to the code. File `boot_sect_print.asm` is the subroutine which will
-get `%include`d in the main file. It uses a loop to print bytes on screen.
+get `%included` in the main file. It uses a loop to print bytes on screen.
 It also includes a function to print a newline. The familiar `'\n'` is
 actually two bytes, the newline char `0x0A` and a carriage return `0x0D`. Please
 experiment by removing the carriage return char and see its effect.

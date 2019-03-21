@@ -21,8 +21,14 @@ start:
 done:
     popa
     ret
-
-
+TEST_MSG db "test",0
+print_test:
+	pusha
+	mov bx, TEST_MSG
+	call print
+	call print_nl
+	popa
+	ret
 
 print_nl:
     pusha
