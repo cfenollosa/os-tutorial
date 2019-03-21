@@ -7,7 +7,7 @@ OBJ = ${C_SOURCES:.c=.o}
 CC = cc
 GDB = gdb
 # -g: Use debugging symbols in gcc
-CFLAGS = -g -m32
+CFLAGS = -g -m32 
 LDFLAGS = -m elf_i386 --ignore-unresolved-symbol _GLOBAL_OFFSET_TABLE_
 
 # First rule is run by default
