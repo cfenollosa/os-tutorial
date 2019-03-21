@@ -1,6 +1,7 @@
 os-tutorial
-update: Modified something for Ubuntu run, such as gcc,ld key words and flags
 ===========
+
+*Update*: Modified something for Ubuntu run, such as gcc,ld key words and flags
 
 How to create an OS from scratch!
 
