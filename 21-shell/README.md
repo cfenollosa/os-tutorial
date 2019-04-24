@@ -1,7 +1,7 @@
 
 **Goal: Clean the code a bit and parse user input**
 
-In this lesson we will do tho things. First, we will clean up the code a bit, so it is ready 
+In this lesson we will do two things. First, we will clean up the code a bit, so it is ready 
 for further lessons. During the previous ones I tried to put things in the most predictable places,
 but it is also a good exercise to know when the code base is growing and adapt it to current
 and further needs.
@@ -34,7 +34,7 @@ we implement the boot sequence for a different machine.
 There are more switches for the `CFLAGS` on the `Makefile`, since we will now
 start creating higher-level functions for our C library and we don't want
 the compiler to include any external code if we make a mistake with a declaration.
-We also added some flags to turn warnings into errors, since an apparantly minor mistake
+We also added some flags to turn warnings into errors, since an apparently minor mistake
 converting pointers can blow up later on. This also forced us to modify some misc pointer
 declarations in our code.
 

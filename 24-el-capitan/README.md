@@ -1,6 +1,6 @@
 **Goal: Update our build system to El Capitan**
 
-If you were following this guide from the beginning, and upgraded to El Capitan only
+If you were following this guide from the beginning and upgraded to El Capitan only
 to find that Makefiles don't compile anymore, follow these instructions to upgrade
 your cross-compiler.
 
@@ -33,7 +33,7 @@ export PATH="$PREFIX/bin:$PATH"
 binutils
 --------
 
-Rember: always be careful before pasting walls of text from the internet. I recommend copying line by line.
+Remember: always be careful before pasting walls of text from the internet. I recommend copying line by line.
 
 ```sh
 mkdir /tmp/src
