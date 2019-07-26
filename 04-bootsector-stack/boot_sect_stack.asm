@@ -9,10 +9,16 @@ push 'C'
 
 ; to show how the stack grows downwards
 mov al, [0x7ffe] ; 0x8000 - 2
-int 0x10
+int 0x10 ; prints A
+
+mov al, [0x7ffc] ; 0x8000 - 4
+int 0x10 ; prints B
+
+mov al, [0x7ffa] ; 0x8000 - 6
+int 0x10 ; prints C
 
 ; however, don't try to access [0x8000] now, because it won't work
-; you can only access the stack top so, at this point, only 0x7ffe (look above)
+; 0x8000 is just the base address and doesn't contain anything
 mov al, [0x8000]
 int 0x10
 
@@ -31,10 +37,6 @@ int 0x10 ; prints B
 pop bx
 mov al, bl
 int 0x10 ; prints A
-
-; data that has been pop'd from the stack is garbage now
-mov al, [0x8000]
-int 0x10
 
 
 jmp $
