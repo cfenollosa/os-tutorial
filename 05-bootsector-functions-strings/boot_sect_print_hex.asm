@@ -20,6 +20,7 @@ hex_loop:
     cmp al, 0x39 ; if > 9, add extra 8 to represent 'A' to 'F'
     jle step2
     add al, 7 ; 'A' is ASCII 65 instead of 58, so 65-58=7
+    jmp step2
 
 step2:
     ; 2. get the correct position of the string to place our ASCII char
