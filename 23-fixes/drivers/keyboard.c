@@ -28,7 +28,8 @@ const char sc_ascii[] = { '?', '?', '1', '2', '3', '4', '5', '6',
 static void keyboard_callback(registers_t *regs) {
     /* The PIC leaves us the scancode in port 0x60 */
     uint8_t scancode = port_byte_in(0x60);
-    
+    char letter;
+    char str[2];
     if (scancode > SC_MAX) return;
     if (scancode == BACKSPACE) {
         backspace(key_buffer);
@@ -38,9 +39,10 @@ static void keyboard_callback(registers_t *regs) {
         user_input(key_buffer); /* kernel-controlled function */
         key_buffer[0] = '\0';
     } else {
-        char letter = sc_ascii[(int)scancode];
+        letter = sc_ascii[(int)scancode];
         /* Remember that kprint only accepts char[] */
-        char str[2] = {letter, '\0'};
+        str[0] = letter;
+        str[1] = '\0';
         append(key_buffer, letter);
         kprint(str);
     }
