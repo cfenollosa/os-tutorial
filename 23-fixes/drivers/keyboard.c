@@ -32,6 +32,9 @@ static void keyboard_callback(registers_t *regs) {
     char str[2];
     if (scancode > SC_MAX) return;
     if (scancode == BACKSPACE) {
+        if (strcmp(key_buffer, "") == 0) {
+          return;
+        }
         backspace(key_buffer);
         kprint_backspace();
     } else if (scancode == ENTER) {
