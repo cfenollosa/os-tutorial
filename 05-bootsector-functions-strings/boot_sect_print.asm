@@ -1,3 +1,4 @@
+[bits 16]
 print:
     pusha
 
