@@ -12,6 +12,7 @@
 #define REG_SCREEN_DATA 0x3d5
 
 /* Public kernel API */
+int strlen();
 void clear_screen();
 void kprint_at(char *message, int col, int row);
 void kprint(char *message);
