@@ -62,7 +62,7 @@ On `cpu/isr.h` we define 32 of them, manually. They are declared as
 
 Before jumping to the assembler code, check out `cpu/isr.c`. As you can see,
 we define a function to install all isrs at once and load the IDT, a list of error
-messages, and the high level handler, which kprints some information. You
+messages, and the high level handler, which prints some information. You
 can customize `isr_handler` to print/do whatever you want.
 
 Now to the low level which glues every `idt_gate` with its low-level and
