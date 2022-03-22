@@ -7,6 +7,12 @@ available for you.
 
 On a mac, [install Homebrew](http://brew.sh) and then `brew install qemu nasm`
 
+For ubuntu users, who are using version >= 18.04
+
+```bash
+sudo apt-get install qemu-kvm qemu virt-manger virt-viewer libvirt-daemon-system libvirt-clients bridge-utils
+```
+
 Don't use the Xcode developer tools `nasm` if you have them installed, they won't work for the most cases. Always use `/usr/local/bin/nasm`
 
 On some systems qemu is split into multiple binaries. You may want
