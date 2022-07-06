@@ -83,11 +83,9 @@ int print_char(char c, int col, int row, char attr) {
 
     /* Check if the offset is over screen size and scroll */
     if (offset >= MAX_ROWS * MAX_COLS * 2) {
-        int i;
-        for (i = 1; i < MAX_ROWS; i++) 
-            memory_copy(get_offset(0, i) + VIDEO_ADDRESS,
-                        get_offset(0, i-1) + VIDEO_ADDRESS,
-                        MAX_COLS * 2);
+        memory_copy(get_offset(0, 1) + VIDEO_ADDRESS,
+                    get_offset(0, 0) + VIDEO_ADDRESS,
+                    MAX_COLS * (MAX_ROWS - 1) * 2);
 
         /* Blank last line */
         char *last_line = get_offset(0, MAX_ROWS-1) + VIDEO_ADDRESS;
