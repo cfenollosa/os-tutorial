@@ -10,7 +10,7 @@
 #define ENTER 0x1C
 #define LSHIFT_DOWN 0x2a
 #define LSHIFT_UP 0xaa
-int caps = 0;
+u8 caps = 0;
 static char key_buffer[256];
 
 #define SC_MAX 57
