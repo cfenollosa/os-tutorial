@@ -75,3 +75,8 @@ int strcmp(char s1[], char s2[]) {
     }
     return s1[i] - s2[i];
 }
+
+char chrupper(char chr) {
+  if((chr>96) && (chr<123)) chr ^=0x20;
+  return chr;
+}
