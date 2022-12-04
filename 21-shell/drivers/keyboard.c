@@ -47,7 +47,7 @@ static void keyboard_callback(registers_t regs) {
     } else {
         char letter = sc_ascii[(int)scancode];
         /* Remember that kprint only accepts char[] */
-        if (caps == 1) {letter = chrupper(letter)};
+        if (caps == 1) {letter = chrupper(letter);};
         char str[2] = {letter, '\0'};
         append(key_buffer, letter);
         kprint(str);
