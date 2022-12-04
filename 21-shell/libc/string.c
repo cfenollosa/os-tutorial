@@ -33,6 +33,10 @@ int strlen(char s[]) {
     while (s[i] != '\0') ++i;
     return i;
 }
+char chrupper(char chr) {
+  if((chr>96) && (chr<123)) chr ^=0x20;
+  return chr;
+}
 
 void append(char s[], char n) {
     int len = strlen(s);
