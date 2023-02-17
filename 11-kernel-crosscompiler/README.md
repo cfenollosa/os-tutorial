@@ -55,6 +55,11 @@ cd binutils-build
 make all install 2>&1 | tee make.log
 ```
 
+NOTE: Run this if on mac to substitiute the /usr/include directory
+```
+export CPATH="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/"
+```
+
 gcc
 ---
 ```sh
