@@ -19,6 +19,7 @@ you didn't do it on lesson 00, and get those packages with `brew install`
 - mpfr
 - libmpc
 - gcc
+- wget
 
 Yes, we will need `gcc` to build our cross-compiled `gcc`, especially on a Mac where gcc has been deprecated for `clang`
 
@@ -62,6 +63,7 @@ curl -O https://ftp.gnu.org/gnu/gcc/gcc-4.9.1/gcc-4.9.1.tar.bz2
 tar xf gcc-4.9.1.tar.bz2
 mkdir gcc-build
 cd gcc-build
+../gcc-4.9.1/contrib/download_prerequisites
 ../gcc-4.9.1/configure --target=$TARGET --prefix="$PREFIX" --disable-nls --disable-libssp --enable-languages=c --without-headers
 make all-gcc 
 make all-target-libgcc 
