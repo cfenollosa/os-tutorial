@@ -59,7 +59,7 @@ gcc
 ---
 ```sh
 cd /tmp/src
-curl -O https://ftp.gnu.org/gnu/gcc/gcc-4.9.1/gcc-4.9.1.tar.bz2
+curl -O https://ftp.gnu.org/gnu/gcc/gcc-12.2.0/gcc-12.2.0.tar.gz
 tar xf gcc-4.9.1.tar.bz2
 mkdir gcc-build
 cd gcc-build
