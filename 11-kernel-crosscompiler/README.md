@@ -63,8 +63,8 @@ curl -O https://ftp.gnu.org/gnu/gcc/gcc-12.2.0/gcc-12.2.0.tar.gz
 tar xf gcc-4.9.1.tar.bz2
 mkdir gcc-build
 cd gcc-build
-../gcc-4.9.1/contrib/download_prerequisites
-../gcc-4.9.1/configure --target=$TARGET --prefix="$PREFIX" --disable-nls --disable-libssp --enable-languages=c --without-headers
+../gcc-12.2.0/contrib/download_prerequisites
+../gcc-12.2.0/configure --target=$TARGET --prefix="$PREFIX" --disable-nls --disable-libssp --enable-languages=c --without-headers
 make all-gcc 
 make all-target-libgcc 
 make install-gcc 
