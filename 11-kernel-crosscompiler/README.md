@@ -1,3 +1,6 @@
+Kernel: Crosscompiler
+=====================
+
 *Concepts you may want to Google beforehand: cross-compiler*
 
 **Goal: Create a development environment to build your kernel**
@@ -6,7 +9,7 @@ If you're using a Mac, you will need to do this process right away. Otherwise, i
 for a few more lessons. Anyway, you will need a cross-compiler once we jump to developing in a higher
 language, that is, C. [Read why](http://wiki.osdev.org/Why_do_I_need_a_Cross_Compiler%3F)
 
-I'll be adapting the instructions [at the OSDev wiki](http://wiki.osdev.org/GCC_Cross-Compiler). 
+I'll be adapting the instructions [at the OSDev wiki](http://wiki.osdev.org/GCC_Cross-Compiler).
 
 
 Required packages
@@ -63,10 +66,10 @@ tar xf gcc-4.9.1.tar.bz2
 mkdir gcc-build
 cd gcc-build
 ../gcc-4.9.1/configure --target=$TARGET --prefix="$PREFIX" --disable-nls --disable-libssp --enable-languages=c --without-headers
-make all-gcc 
-make all-target-libgcc 
-make install-gcc 
-make install-target-libgcc 
+make all-gcc
+make all-target-libgcc
+make install-gcc
+make install-target-libgcc
 ```
 
 That's it! You should have all the GNU binutils and the compiler at `/usr/local/i386elfgcc/bin`, prefixed by `i386-elf-` to avoid

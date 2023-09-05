@@ -1,7 +1,9 @@
+Shell
+=====
 
 **Goal: Clean the code a bit and parse user input**
 
-In this lesson we will do two things. First, we will clean up the code a bit, so it is ready 
+In this lesson we will do two things. First, we will clean up the code a bit, so it is ready
 for further lessons. During the previous ones I tried to put things in the most predictable places,
 but it is also a good exercise to know when the code base is growing and adapt it to current
 and further needs.
@@ -52,7 +54,7 @@ arrays which are defined at the beginning of `keyboard.c`
 - When the OS wants to read user input, it calls `libc/io.c:readline()`
 
 `keyboard.c` also parses backspace, by removing the last element
-of the key buffer, and deleting it from the screen, by calling 
+of the key buffer, and deleting it from the screen, by calling
 `screen.c:kprint_backspace()`. For this we needed to modify a bit
 `print_char()` to not advance the offset when printing a backspace
 

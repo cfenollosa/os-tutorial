@@ -1,3 +1,6 @@
+Bootsector: Functions and Strings
+=================================
+
 *Concepts you may want to Google beforehand: control structures,
 function calling, strings*
 
@@ -52,7 +55,7 @@ endif:
 
 Think in your head in high level, then convert it to assembler in this fashion.
 
-There are many `jmp` conditions: if equal, if less than, etc. They are pretty 
+There are many `jmp` conditions: if equal, if less than, etc. They are pretty
 intuitive but you can always Google them
 
 
@@ -119,7 +122,7 @@ to make sure that we are reading the correct data. File `boot_sect_print_hex.asm
 extends `boot_sect_print.asm` to print hex bytes, not just ASCII chars.
 
 
-Code! 
+Code!
 -----
 
 Let's jump to the code. File `boot_sect_print.asm` is the subroutine which will
