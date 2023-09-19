@@ -1,6 +1,8 @@
 os-tutorial
 ===========
 
+_⚠️ Hey! This is an old, abandoned project, with both technical and design issues [listed here](https://github.com/cfenollosa/os-tutorial/issues/269). Please have fun with this tutorial but do look for more modern and authoritative sources if you want to learn about OS design. ⚠️_
+
 How to create an OS from scratch!
 
 I have always wanted to learn how to make an OS from scratch. In college I was taught
