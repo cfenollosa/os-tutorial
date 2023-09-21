@@ -1,0 +1,52 @@
+from: gfm
+input-files:
+  - ${.}/README.md
+  - ${.}/00-environment/README.md
+  - ${.}/01-bootsector-barebones/README.md
+  - ${.}/02-bootsector-print/README.md
+  - ${.}/03-bootsector-memory/README.md
+  - ${.}/04-bootsector-stack/README.md
+  - ${.}/05-bootsector-functions-strings/README.md
+  - ${.}/06-bootsector-segmentation/README.md
+  - ${.}/07-bootsector-disk/README.md
+  - ${.}/08-32bit-print/README.md
+  - ${.}/09-32bit-gdt/README.md
+  - ${.}/10-32bit-enter/README.md
+  - ${.}/11-kernel-crosscompiler/README.md
+  - ${.}/12-kernel-c/README.md
+  - ${.}/13-kernel-barebones/README.md
+  - ${.}/14-checkpoint/README.md
+  - ${.}/15-video-ports/README.md
+  - ${.}/16-video-driver/README.md
+  - ${.}/17-video-scroll/README.md
+  - ${.}/18-interrupts/README.md
+  - ${.}/19-interrupts-irqs/README.md
+  - ${.}/20-interrupts-timer/README.md
+  - ${.}/21-shell/README.md
+  - ${.}/22-malloc/README.md
+  - ${.}/23-fixes/README.md
+  - ${.}/24-el-capitan/README.md
+
+to: pdf
+pdf-engine: context
+output-file: os-tutorial.pdf
+
+variables:
+  title: OS Tutorial
+  subtitle: How to create an OS from scratch
+  author: Carlos Fenollosa
+  includesource: true
+  papersize: letter
+  pdfa: true
+  linkcolor: blue
+  linkcontrastcolor: red
+
+file-scope: true
+verbosity: ERROR
+tab-stop: 4
+template: ./pandoc.context
+dpi: 300
+toc: true
+top-level-division: chapter
+reference-location: section
+number-sections: true

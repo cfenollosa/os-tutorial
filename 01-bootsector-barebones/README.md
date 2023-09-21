@@ -1,3 +1,6 @@
+Bootsector: Barebones
+=====================
+
 *Concepts you may want to Google beforehand: assembler, BIOS*
 
 **Goal: Create a file which the BIOS interprets as a bootable disk**
@@ -25,7 +28,7 @@ e9 fd ff 00 00 00 00 00 00 00 00 00 00 00 00 00
 ```
 
 It is basically all zeros, ending with the 16-bit value
-`0xAA55` (beware of endianness, x86 is little-endian). 
+`0xAA55` (beware of endianness, x86 is little-endian).
 The first three bytes perform an infinite jump
 
 Simplest boot sector ever
@@ -38,12 +41,12 @@ simple assembler code:
 ```nasm
 ; Infinite loop (e9 fd ff)
 loop:
-    jmp loop 
+    jmp loop
 
 ; Fill with 510 zeros minus the size of the previous code
 times 510-($-$$) db 0
 ; Magic number
-dw 0xaa55 
+dw 0xaa55
 ```
 
 To compile:

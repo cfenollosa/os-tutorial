@@ -1,3 +1,6 @@
+Interrupts
+==========
+
 *Concepts you may want to Google beforehand: C types and structs, include guards, type attributes: packed, extern, volatile, exceptions*
 
 **Goal: Set up the Interrupt Descriptor Table to handle CPU interrupts**
@@ -24,7 +27,7 @@ From now on, our C header files will also have include guards.
 Interrupts
 ----------
 
-Interrupts are one of the main things that a kernel needs to 
+Interrupts are one of the main things that a kernel needs to
 handle. We will implement it now, as soon as possible, to be able
 to receive keyboard input in future lessons.
 
@@ -37,13 +40,13 @@ programming the IDT in assembly, we'll do it in C.
 
 `cpu/idt.h` defines how an idt entry is stored `idt_gate` (there need to be
 256 of them, even if null, or the CPU may panic) and the actual
-idt structure that the BIOS will load, `idt_register` which is 
+idt structure that the BIOS will load, `idt_register` which is
 just a memory address and a size, similar to the GDT register.
 
 Finally, we define a couple variables to access those data structures
 from assembler code.
 
-`cpu/idt.c` just fills in every struct with a handler. 
+`cpu/idt.c` just fills in every struct with a handler.
 As you can see, it is a matter
 of setting the struct values and calling the `lidt` assembler command.
 
@@ -51,8 +54,8 @@ of setting the struct values and calling the `lidt` assembler command.
 ISRs
 ----
 
-The Interrupt Service Routines run every time the CPU detects an 
-interrupt, which is usually fatal. 
+The Interrupt Service Routines run every time the CPU detects an
+interrupt, which is usually fatal.
 
 We will write just enough code to handle them, print an error message,
 and halt the CPU.
