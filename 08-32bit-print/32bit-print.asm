@@ -7,10 +7,10 @@ WHITE_ON_BLACK equ 0x0f ; the color byte for each character
 print_string_pm:
     pusha
     mov edx, VIDEO_MEMORY
+    mov ah, WHITE_ON_BLACK
 
 print_string_pm_loop:
     mov al, [ebx] ; [ebx] is the address of our character
-    mov ah, WHITE_ON_BLACK
 
     cmp al, 0 ; check if end of string
     je print_string_pm_done
