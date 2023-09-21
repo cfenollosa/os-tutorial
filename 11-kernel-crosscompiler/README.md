@@ -9,11 +9,21 @@ language, that is, C. [Read why](http://wiki.osdev.org/Why_do_I_need_a_Cross_Com
 I'll be adapting the instructions [at the OSDev wiki](http://wiki.osdev.org/GCC_Cross-Compiler). 
 
 
+Using a package manager
+-----------------------
+
+On some systems, the cross-compiler can be installed by a package manager.
+
+On Linux, use your package manager to install `gcc`. On a Mac, [install Homebrew](http://brew.sh/)
+if you didn't do it on lesson 00, and then `brew install i386-elf-gcc`
+
+If this doesn't work, you may need to build the cross-compiler yourself.
+
+
 Required packages
 -----------------
 
-First, install the required packages. On linux, use your package distribution. On a Mac, [install brew](http://brew.sh/) if
-you didn't do it on lesson 00, and get those packages with `brew install`
+First, install the required packages.
 
 - gmp
 - mpfr
