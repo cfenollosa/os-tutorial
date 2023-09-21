@@ -14,7 +14,7 @@ First of all, we will quickly start to need more utility functions
 for handling strings and so on. In a regular OS, this is called the C library,
 or libc for short.
 
-Right now we have a `utils.c` which we will split into `mem.c` and `string.c`, with their respective headers.
+Right now we have a `util.c` which we will split into `mem.c` and `string.c`, with their respective headers.
 
 Second, we will create a new function `irq_install()` so that the kernel
 only needs to perform one call to initialize all the IRQs. That function
