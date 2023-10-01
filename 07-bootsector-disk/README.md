@@ -8,7 +8,7 @@ a disk in order to run the kernel.
 
 Thankfully, we don't have to deal with turning spinning platters on and off,
 we can just call some BIOS routines, like we did to print characters on the screen.
-To do so, we set `al` to `0x02` (and other registers with the required cylinder, head
+To do so, we set `ah` to `0x02` (and other registers with the required cylinder, head
 and sector) and raise `int 0x13`
 
 You can access [a detailed int 13h guide here](http://stanislavs.org/helppc/int_13-2.html)
