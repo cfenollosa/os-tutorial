@@ -79,7 +79,7 @@ We add `cld` just before `call isr_handler` on `cpu/interrupt.asm` as suggested
 by the osdev wiki.
 
 There is a final, important issue with `cpu/interrupt.asm`. The common stubs create an instance
-of `struct registers` on the stack and then call the C handler. But that breaks the ABI, since
+of `struct registers_t` on the stack and then call the C handler. But that breaks the ABI, since
 the stack belongs to the called function and they may change them as they please. It is needed
 to pass the struct as a pointer.
 

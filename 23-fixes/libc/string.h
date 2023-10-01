@@ -1,5 +1,5 @@
-#ifndef STRINGS_H
-#define STRINGS_H
+#ifndef STRING_H
+#define STRING_H
 
 void int_to_ascii(int n, char str[]);
 void hex_to_ascii(int n, char str[]);
