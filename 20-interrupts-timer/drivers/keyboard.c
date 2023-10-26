@@ -196,7 +196,7 @@ void print_letter(u8 scancode) {
             kprint("Spc");
             break;
         default:
-            /* 'keuyp' event corresponds to the 'keydown' + 0x80 
+            /* 'keyup' event corresponds to the 'keydown' + 0x80 
              * it may still be a scancode we haven't implemented yet, or
              * maybe a control/escape sequence */
             if (scancode <= 0x7f) {
