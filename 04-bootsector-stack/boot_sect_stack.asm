@@ -3,12 +3,12 @@ mov ah, 0x0e ; tty mode
 mov bp, 0x8000 ; this is an address far away from 0x7c00 so that we don't get overwritten
 mov sp, bp ; if the stack is empty then sp points to bp
 
-push 'A'
+push 'A' ; pushes 2 bytes onto the top of the stack since the CPU is in 16bit mode
 push 'B'
 push 'C'
 
 ; to show how the stack grows downwards
-mov al, [0x7ffe] ; 0x8000 - 2
+mov al, [0x7ffe] ; 0x8000 - 2 (each character takes 2 bytes due to 16bit boundaries)
 int 0x10
 
 ; however, don't try to access [0x8000] now, because it won't work
