@@ -14,7 +14,7 @@ but:
 - I'm fed up with people who think that reading an already existing kernel, even if small, is 
 a good idea to learn operating systems.
 
-Inspired by [this document](http://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf)
+Inspired by [this document](https://web.archive.org/web/20131205064209/http://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf)
 and the [OSDev wiki](http://wiki.osdev.org/), I'll try to make short step-by-step READMEs and
 code samples for anybody to follow. Honestly, this tutorial is basically the first document but
 split into smaller pieces and without the theory.

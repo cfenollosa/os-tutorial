@@ -3,7 +3,7 @@
 **Goal: Learn how the computer memory is organized**
 
 Please open page 14 [of this document](
-http://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf)<sup>1</sup>
+https://web.archive.org/web/20131205064209/http://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf)<sup>1</sup>
 and look at the figure with the memory layout.
 
 The only goal of this lesson is to learn where the boot sector is stored
