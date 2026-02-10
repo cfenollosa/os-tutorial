@@ -46,7 +46,7 @@ You can examine the binary data with `xxd file.bin`
 
 Anyway, you know the drill:
 
-`nasm -fbin boot_sect_hello.asm -o boot_sect_hello.bin`
+`nasm -f bin boot_sect_hello.asm -o boot_sect_hello.bin`
 
 `qemu boot_sect_hello.bin`
 
