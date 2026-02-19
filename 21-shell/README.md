@@ -18,7 +18,7 @@ Right now we have a `utils.c` which we will split into `mem.c` and `string.c`, w
 
 Second, we will create a new function `irq_install()` so that the kernel
 only needs to perform one call to initialize all the IRQs. That function
-is akin to `isr_install()` and placed on the same `irq.c`.
+is akin to `isr_install()` and placed on the same `isr.c`.
 While we're here, we will disable the `kprint()` on `timer_callback()`
 to avoid filling the screen with junk, now that we know that it works
 properly.
