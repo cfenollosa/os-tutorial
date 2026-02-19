@@ -1,3 +1,6 @@
+El Capitan
+==========
+
 **Goal: Update our build system to El Capitan**
 
 If you were following this guide from the beginning and upgraded to El Capitan only
@@ -56,10 +59,10 @@ tar xf gcc-4.9.1.tar.bz2
 mkdir gcc-build
 cd gcc-build
 ../gcc-4.9.1/configure --target=$TARGET --prefix="$PREFIX" --disable-nls --disable-libssp --enable-languages=c --without-headers
-make all-gcc 
-make all-target-libgcc 
-make install-gcc 
-make install-target-libgcc 
+make all-gcc
+make all-target-libgcc
+make install-gcc
+make install-target-libgcc
 ```
 
 

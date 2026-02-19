@@ -1,3 +1,6 @@
+Bootsector: Print
+=================
+
 *Concepts you may want to Google beforehand: interrupts, CPU
 registers*
 
@@ -14,7 +17,7 @@ is a general interrupt for video services.
 `0x0e` on `ah` tells the video interrupt that the actual function
 we want to run is to 'write the contents of `al` in tty mode'.
 
-We will set tty mode only once though in the real world we 
+We will set tty mode only once though in the real world we
 cannot be sure that the contents of `ah` are constant. Some other
 process may run on the CPU while we are sleeping, not clean
 up properly and leave garbage data on `ah`.
@@ -39,7 +42,7 @@ jmp $ ; jump to current address = infinite loop
 
 ; padding and magic number
 times 510 - ($-$$) db 0
-dw 0xaa55 
+dw 0xaa55
 ```
 
 You can examine the binary data with `xxd file.bin`

@@ -1,3 +1,6 @@
+Bootsector: Stack
+=================
+
 *Concepts you may want to Google beforehand: stack*
 
 **Goal: Learn how to use the stack**
@@ -11,5 +14,5 @@ decremented)
 
 This lesson is quite straightforward, so jump ahead to the code.
 
-I suggest that you try accessing in-stack memory addresses by yourself, 
+I suggest that you try accessing in-stack memory addresses by yourself,
 at different points in the code, and see what happens.

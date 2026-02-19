@@ -1,3 +1,6 @@
+Kernel: Barebones
+=================
+
 *Concepts you may want to Google beforehand: kernel, ELF format, makefile*
 
 **Goal: Create a simple kernel and a bootsector capable of booting it**

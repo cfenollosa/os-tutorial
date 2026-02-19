@@ -1,3 +1,6 @@
+Video: Ports
+============
+
 *Concepts you may want to Google beforehand: I/O ports*
 
 **Goal: Learn how to use the VGA card data ports**

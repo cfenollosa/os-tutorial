@@ -1,3 +1,6 @@
+Video: Driver
+=============
+
 *Concepts you may want to Google beforehand: VGA character cells, screen offset*
 
 **Goal: Write strings on the screen**
@@ -44,7 +47,7 @@ Like `kprint_at`, `print_char` allows cols/rows to be `-1`. In that case it retr
 the cursor position from the hardware, using the `ports.c` routines.
 
 `print_char` also handles newlines. In that case, we will position the cursor offset
-to column 0 of the next row. 
+to column 0 of the next row.
 
 Remember that the VGA cells take two bytes, one for the character itself and another one
 for the attribute.
