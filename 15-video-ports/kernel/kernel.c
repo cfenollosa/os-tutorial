@@ -18,7 +18,7 @@ void main() {
     /* Now you can examine both variables using gdb, since we still
      * don't know how to print strings on screen. Run 'make debug' and
      * on the gdb console:
-     * breakpoint kernel.c:21
+     * b kernel.c:21
      * continue
      * print position
      * print offset_from_vga
