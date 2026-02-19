@@ -11,7 +11,7 @@ The timer is easy to configure. First we'll declare an `init_timer()` on `cpu/ti
 implement it on `cpu/timer.c`. It is just a matter of computing the clock frequency and
 sending the bytes to the appropriate ports.
 
-We will now fix `kernel/utils.c int_to_ascii()` to print the numbers in the correct order.
+We will now fix `kernel/util.c int_to_ascii()` to print the numbers in the correct order.
 For that, we need to implement `reverse()` and `strlen()`.
 
 Finally, go back to the `kernel/kernel.c` and do two things. Enable interrupts again
