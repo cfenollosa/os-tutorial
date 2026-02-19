@@ -19,7 +19,7 @@ and see which ones work and why.
 First, we will define the X as data, with a label:
 ```nasm
 the_secret:
-    db "X"
+    db 'X'
 ```
 
 Then we will try to access `the_secret` in many different ways:
