@@ -37,7 +37,7 @@ end:
     ; prepare the parameter and call the function
     ; remember that print receives parameters in 'bx'
     mov bx, HEX_OUT
-    call print
+    call print_hex
 
     popa
     ret
