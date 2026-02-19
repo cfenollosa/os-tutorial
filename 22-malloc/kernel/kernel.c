@@ -19,7 +19,7 @@ void user_input(char *input) {
     } else if (strcmp(input, "PAGE") == 0) {
         /* Lesson 22: Code to test kmalloc, the rest is unchanged */
         u32 phys_addr;
-        u32 page = kmalloc(1000, 1, &phys_addr);
+        u32 page = kmalloc_int(1000, 1, &phys_addr);
         char page_str[16] = "";
         hex_to_ascii(page, page_str);
         char phys_str[16] = "";
